@@ -38,4 +38,3 @@ The PCB design includes:
 3. Mount your sensors and connectors onto the provided slots on the PCBA.
 4. Voilà! Your Poor Men’s Smart Glasses are now ready for some tech magic.
 
-## ASCII Sunglasses
