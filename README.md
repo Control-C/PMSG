@@ -8,6 +8,9 @@ Ever looked at your old sunglasses and thought, *“These could use a little IoT
 
 Perfect for those who want to look cool while tracking air quality, blinking Morse code, or… just pretending they’re Tony Stark. **Now with 100% more tech nerd street cred**. 🕶️
 
+
+![PMSG Cool Glasses](/img/Example_flow.png)
+
 ## How It Works
 
 - Replace one (or both) arms of your glasses with a custom PCBA 
