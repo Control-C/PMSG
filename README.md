@@ -42,7 +42,7 @@ The PCB design includes:
 
 ## Installation
 
-1. Print the PCB from the `pcb_design` folder. go to https://www.seeedstudio.com/fusion_pcb.html
+1. Get the PCB from the `pcb_design` folder. go to https://www.seeedstudio.com/fusion_pcb.html to *oder sample
    *( dubble check hinges ar simular to you glasses and holes on PCB )  
 ![PMSG ](/img/hinges.png)
 
@@ -53,11 +53,11 @@ The PCB design includes:
 5. Voilà! Your Poor Men’s Smart Glasses are now ready for some tech magic.
 
 ## Software: TODO !!!
-Best is to go and check the offical is you new [Seeed studio for ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/?gad_source=1&gclid=CjwKCAjw3P-2BhAEEiwA3yPhwBK6aCH6z2kCqP-esxGC8T7rXoWwqtbKFqweMOIq9PhEG1TkwNyJIxoCtSoQAvD_BwE) this will help you get going 
+Best is to go and check the offical website of [Seeed studio for ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/?gad_source=1&gclid=CjwKCAjw3P-2BhAEEiwA3yPhwBK6aCH6z2kCqP-esxGC8T7rXoWwqtbKFqweMOIq9PhEG1TkwNyJIxoCtSoQAvD_BwE) this will help and let you setup your system
 
 REV v1 does not include battery management. The plan for hardware REV 2 is to add battery charging and A0 monitoring for the battery later... 
 
-I primarily use PlatformIO, but since I started with the Arduino IDE in my early years, I’ll also include files compatible with it make bit easyer to upload make stuff work... 
+I primarily use PlatformIO, but since I started  also with the Arduino IDE in my early years, I’ll also include files compatible with it make bit easyer to upload make stuff work... 
 
 ------- WIP  ------- 
 
@@ -73,4 +73,7 @@ The PMSG v1 includes:
 - Grove port for GPIO  - D2 and D3 3v3
   
 - A0 will be used to read out Batt level  [Battery voltage monitor]([https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535) )
+
+  TODO
+  Add companion apps for iOS and Android or WIFI linkup, integrating them with machine learning capabilities for enhanced functionality I think adding OLED / buzzer - [vibration_Motor]( https://wiki.seeedstudio.com/Grove-Vibration_Motor) wil be fun to try out - like cycling and letting AI send feedback and getting data from glasses... 
 
