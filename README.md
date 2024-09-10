@@ -1,6 +1,6 @@
 # PMSG
 
-![PMSG Cool Glasses](./path-to-your-image.png)
+![PMSG Cool Glasses](/img/cool.png)
 
 Introducing the **Poor Men’s Smart Glasses (PMSG)**—because who needs designer wearables when you’ve got DIY smarts and a pair of old goggles? 🤓
 
