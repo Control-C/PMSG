@@ -20,7 +20,7 @@ Here’s what you’ll need to bring your PMSG to life:
 
 - Old pair of safety glasses or sunglasses
 - Custom PCBA (available in this repo)
-- Hinges and screws (from the original glasses)
+- Hinges and screws (from the original glasses) see [Link]([https://example.com](https://www.aliexpress.com/item/1005006578852003.html?spm=a2g0o.productlist.main.19.6881yaeCyaeCyD&algo_pvid=940ad7e5-1196-4d4c-bb03-062302b6db00&algo_exp_id=940ad7e5-1196-4d4c-bb03-062302b6db00-9&pdp_npi=4%40dis%21EUR%211.62%211.62%21%21%211.75%211.75%21%40211b653717259752143568539e1d24%2112000037718488758%21sea%21NL%214699555345%21X&curPageLogUid=cUCXLkrXc9w7&utparam-url=scene%3Asearch%7Cquery_from%3A)) 
 - Sensors (IoT-enabled sensors of your choice: e.g., air quality, light, temperature)
 - Connectors (to hook your glasses up to the web or other devices)
 
