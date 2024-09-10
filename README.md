@@ -1,4 +1,4 @@
-# PMSG
+# PMSG   (Paul's Mooij Smart Glasses )
 
 ![PMSG Cool Glasses](/img/cool.png)
 
