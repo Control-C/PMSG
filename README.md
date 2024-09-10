@@ -24,7 +24,7 @@ Here’s what you’ll need to bring your PMSG to life:
 
 - Old pair of safety glasses or sunglasses
 - Custom PCBA (available in this repo its bassed on the seeed studio XIAO )
-- buy extra pair of hinges simular to the original glasses see [Link]([https://www.aliexpress.com/item/1005006578852003.html?spm=a2g0o.productlist.main.19.6881yaeCyaeCyD&algo_pvid=940ad7e5-1196-4d4c-bb03-062302b6db00&algo_exp_id=940ad7e5-1196-4d4c-bb03-062302b6db00-9&pdp_npi=4%40dis%21EUR%211.62%211.62%21%21%211.75%211.75%21%40211b653717259752143568539e1d24%2112000037718488758%21sea%21NL%214699555345%21X&curPageLogUid=cUCXLkrXc9w7&utparam-url=scene%3Asearch%7Cquery_from%3A]) 
+- buy extra pair of hinges simular to the original glasses  
 - Sensors (IoT-enabled sensors of your choice: e.g., air quality, light, temperature, Oled display and camera bassed off the Seeedstudio Grove and XIAO modular platform )
 - Including A onboard batt holder and system simular to XIAO to run stand alone plans are to add solar pannels at side to dubble as UV sensor to warn user 
 - Connectors (to hook your glasses up to the web or other devices)
@@ -43,7 +43,11 @@ The PCB design includes:
 ## Installation
 
 1. Print the PCB from the `pcb_design` folder. go to https://www.seeedstudio.com/fusion_pcb.html
-   *( dubble check hinges ar simular to you glasses you get hem at https://www.aliexpress.com/item/1005006578852003.html?spm=a2g0o.productlist.main.19.6881yaeCyaeCyD&algo_pvid=940ad7e5-1196-4d4c-bb03-062302b6db00&algo_exp_id=940ad7e5-1196-4d4c-bb03-062302b6db00-9&pdp_npi=4%40dis%21EUR%211.62%211.62%21%21%211.75%211.75%21%40211b653717259752143568539e1d24%2112000037718488758%21sea%21NL%214699555345%21X&curPageLogUid=cUCXLkrXc9w7&utparam-url=scene%3Asearch%7Cquery_from%3A
+   *( dubble check hinges ar simular to you glasses you get hem at 
+![PMSG ](/img/hinges.png)
+
+[Purchase on AliExpress](https://www.aliexpress.com/item/1005006578852003.html?spm=a2g0o.productlist.main.19.6881yaeCyaeCyD&algo_pvid=940ad7e5-1196-4d4c-bb03-062302b6db00&algo_exp_id=940ad7e5-1196-4d4c-bb03-062302b6db00-9&pdp_npi=4%40dis%21EUR%211.62%211.62%21%21%211.75%211.75%21%40211b653717259752143568539e1d24%2112000037718488758%21sea%21NL%214699555345%21X&curPageLogUid=cUCXLkrXc9w7&utparam-url=scene%3Asearch%7Cquery_from%3A)
+
 3. Use the original screw from your glasses to attach the PCBA
 4. Mount your sensors and connectors onto the provided slots on the PCBA.
 5. Voilà! Your Poor Men’s Smart Glasses are now ready for some tech magic.
