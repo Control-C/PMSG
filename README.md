@@ -27,7 +27,8 @@ Here’s what you’ll need to bring your PMSG to life:
 - Connectors (to hook your glasses up to the web or other devices)
 
 ## Configuration 
-- The WIFI and BLE can we switch off and power and data can com via a USB-C host like Smartphone 
+- The WIFI and BLE can we switch off and power and data can com via a USB-C host like Smartphone this protocol is called USB OTG 
+experimental* ( tested on Android for apple ios we need to enter the Apple MFi program or have look at https://github.com/rsms/peertalk/tree/master/Peertalk%20iOS%20Example ) 
 
 ## PCB Design " WARNING IT'S STILL UNTESTED DRAFT DESIGN"
 
