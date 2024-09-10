@@ -10,9 +10,9 @@ Perfect for those who want to look cool while tracking air quality, blinking Mor
 
 ## How It Works
 
-- Replace one (or both) arms of your glasses with a custom PCBA.
+- Replace one (or both) arms of your glasses with a custom PCBA from Seeedstudio.
 - The PCBA has special cutouts for hinges, making it easy to attach to any old frame.
-- Add or remove sensors and connectors with ease—think plug-and-play for your face!
+- Add or remove sensors and connectors with ease—think plug-and-play for your face! *( see Seeedstudio bazar) 
 
 ## Parts List
 
