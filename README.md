@@ -52,3 +52,25 @@ The PCB design includes:
 4. Mount your sensors and connectors into the designated slots on the PCBA. To ensure a better fit, you can enhance the setup by adding 3D-printed parts or applying paint/epoxy to the PCB.
 5. Voilà! Your Poor Men’s Smart Glasses are now ready for some tech magic.
 
+## Software: TODO !!!
+Best is to go and check the offical is you new [Seeed studio for ESP32C3](https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/?gad_source=1&gclid=CjwKCAjw3P-2BhAEEiwA3yPhwBK6aCH6z2kCqP-esxGC8T7rXoWwqtbKFqweMOIq9PhEG1TkwNyJIxoCtSoQAvD_BwE) this will help you get going 
+
+REV v1 does not include battery management. The plan for hardware REV 2 is to add battery charging and A0 monitoring for the battery later... 
+
+I primarily use PlatformIO, but since I started with the Arduino IDE in my early years, I’ll also include files compatible with it make bit easyer to upload make stuff work... 
+
+------- WIP  ------- 
+
+The PMSG v1 includes: 
+- MCU - Esp32C3 *( possible to use the WIFI and BLE please add external antenna its compatible XIAO 2.4Hgz also on todo for v2 )
+- Lux sensor - BH1721FVC-TR
+- Humidety and Temperure sensor - HDC1080DMBR
+- Button 1  port D8 3v3 
+- Button 2  port D10 3v3
+- USB - C  *( send data via serial 119200 for OTG ) 
+- Grove port for I2C ( I will make compatible for  [Oled Display 0.96](https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/)
+- Grove port for Uart 3v3
+- Grove port for GPIO  - D2 and D3 3v3
+  
+- A0 will be used to read out Batt level  [Battery voltage monitor]([https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535) )
+
