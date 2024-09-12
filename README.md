@@ -31,7 +31,9 @@ Here’s what you’ll need to bring your PMSG to life:
 
 ## Configuration 
 - The WIFI and BLE can we switch off and power and data can com via a USB-C host like Smartphone this protocol is called USB OTG 
-experimental* ( tested on Android for apple ios we need to enter the Apple MFi program or have look at https://github.com/rsms/peertalk/tree/master/Peertalk%20iOS%20Example ) 
+experimental* ( tested on Android for apple ios we need to enter the Apple MFi program or have look at https://github.com/rsms/peertalk/tree/master/Peertalk%20iOS%20Example )
+
+The fix possition of 2.4gHz antannane ( wifi/ble ) and possible more like Lora, UHF 800/900mhz I im still researching to also compli with [SAR](https://en.wikipedia.org/wiki/Specific_absorption_rate), RED, and FCC compliance 
 
 ## PCB Design " WARNING IT'S STILL UNTESTED DRAFT DESIGN"
 
@@ -68,8 +70,8 @@ The PMSG v1 includes:
 - Button 1  port D8 3v3 
 - Button 2  port D10 3v3
 - USB - C  *( send data via serial 119200 for OTG ) 
-- Grove port for I2C ( I will make compatible for  [Oled Display 0.96](https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/)
-- Grove port for Uart 3v3
+- Grove port for I2C ( for adding display on to glass inside inlcuding lens and  [Oled Display 0.96](https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/)  )
+- Grove port for Uart 3v3  ( for adding a uart bassed camera to side of frame ) 
 - Grove port for GPIO  - D2 and D3 3v3
   
 - A0 will be used to read out Batt level  [Battery voltage monitor]([https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535) )
