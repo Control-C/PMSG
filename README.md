@@ -2,7 +2,17 @@
 
 ![PMSG Cool Glasses](/img/cool.png)
 
-Introducing the **Protype  Monitoring Smart Glasses (PMSG)**—because who needs designer wearables when you’ve got DIY smarts and a pair of old goggles? 🤓
+----------------------------------------------------------------------------------------------------------------------------------------------------
+## Future Updates: PMSG v4 and Beyond
+In 2026, we'll be rolling out exciting enhancements to the PMSG project. This includes pin reconfigurations for improved compatibility in next-generation versions (v4 and higher). We're also planning to release a comprehensive SDK along with affordable hardware kits based on the Seeed Studio XIAO platform—designed for easy integration without the need for a full pair of sunglasses.
+For more details on these upcoming features and to stay updated, visit our  [PMSG official website:](https://PMSG.online)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Opensource version:
+
+Introducing the **PMSG**—because who needs designer wearables when you’ve got DIY smarts and a pair of old goggles? 🤓
 
 Ever looked at your old sunglasses and thought, *“These could use a little IoT love?”* Well, now they can! The PMSG kit lets you swap out those boring old arms for a custom-made PCBA that looks and functions like something a hacker MacGyver would dream up. It fits just like the original—using the same hinges, screws, and probably duct tape somewhere—but now you’ve got space for sensors, connectors, and all the IoT magic you can pack onto your temples.
 
@@ -61,7 +71,7 @@ REV v1 does not include battery management. The plan for hardware REV 2 is to ad
 
 I primarily use PlatformIO, but since I started  also with the Arduino IDE in my early years, I’ll also include files compatible with it make bit easyer to upload make stuff work... 
 
-------- WIP  -------  ( 2026 we will updae this to we change some pin for next GEN v4 and higer )
+------- WIP  ------- 
 
 The PMSG v1 includes: 
 - MCU - Esp32C3 *( possible to use the WIFI and BLE please add external antenna its compatible XIAO 2.4Hgz also on todo for v2 )
@@ -75,5 +85,10 @@ The PMSG v1 includes:
 - Grove port for GPIO  - D2 and D3 3v3
   
 - A0 will be used to read out Batt level  [Battery voltage monitor]([https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/](https://forum.seeedstudio.com/t/battery-voltage-monitor-and-ad-conversion-for-xiao-esp32c/267535) )
+
+## Future Updates: PMSG v4 and Beyond
+In 2026, we'll be rolling out exciting enhancements to the PMSG project. This includes pin reconfigurations for improved compatibility in next-generation versions (v4 and higher). We're also planning to release a comprehensive SDK along with affordable hardware kits based on the Seeed Studio XIAO platform—designed for easy integration without the need for a full pair of sunglasses.
+For more details on these upcoming features and to stay updated, visit our  [PMSG official website:](https://PMSG.online)
+
 
 
