@@ -12,7 +12,7 @@ By seeed studio see https://wiki.seeedstudio.com/xiao-esp32-swift/
  - Run 'make setup' first if needed, then 'make all' to build
 
 # Project name
-PROJECT_NAME := pmsg-smart-glasses
+PROJECT_NAME := pm-smart-glasses
 
 # IDF_PATH should be set in environment
 ifndef IDF_PATH
@@ -54,3 +54,12 @@ ci-build:
 
 # Flash with monitor for development
 run: flash monitor
+
+
+# More options
+![PMSG Cool Glasses](img/PMSG_mesh.png)
+
+#Add i2C to connect to ambient sensor and link it to Apple Home kit
+![PMSG layout sensor ](img/pmsg.png)
+
+
