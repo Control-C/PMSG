@@ -1,6 +1,6 @@
 By seeed studio see https://wiki.seeedstudio.com/xiao-esp32-swift/
 
-![PMSG Cool Glasses](img/psmg_bril.png=300x200)
+![PMSG Cool Glasses](img/psmg_bril.png)
 
 
  
