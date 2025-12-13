@@ -1,4 +1,4 @@
-# PMSG   (P.M. Smart Glasses )
+# PMSG   (P.M. Smart Glasses ) Flash custom firmware in minutes have fun using you PMSG in your way
 
 ![PMSG Cool Glasses](/img/cool.png)
 
