@@ -5,11 +5,11 @@ By seeed studio see https://wiki.seeedstudio.com/xiao-esp32-swift/
 ![PMSG Cool Glasses](img/psmg_bril.png)
 
 # This Makefile assumes:
-# - ESP-IDF v5.2.1 is installed and sourced (source ~/esp-idf/export.sh or use 'get_idf' alias)
-# - Swift 6.0 toolchain is installed and in PATH
-# - The project structure follows ESP-IDF with Swift integration in main/ (e.g., Swift sources in main/, CMakeLists.txt configured for swiftc)
-# - Ported PMSG logic from Arduino to Embedded Swift (e.g., display handling via U8g2 or similar, WiFi for connectivity)
-# - Run 'make setup' first if needed, then 'make all' to build
+ - ESP-IDF v5.2.1 is installed and sourced (source ~/esp-idf/export.sh or use 'get_idf' alias)
+ - Swift 6.0 toolchain is installed and in PATH
+ - The project structure follows ESP-IDF with Swift integration in main/ (e.g., Swift sources in main/, CMakeLists.txt configured for swiftc)
+ - Ported PMSG logic from Arduino to Embedded Swift (e.g., display handling via U8g2 or similar, WiFi for connectivity)
+ - Run 'make setup' first if needed, then 'make all' to build
 
 # Project name
 PROJECT_NAME := pmsg-smart-glasses
