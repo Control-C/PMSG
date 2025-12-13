@@ -61,5 +61,21 @@ run: flash monitor
 
 #Add i2C to connect to ambient sensor and link it to Apple Home kit
 ![PMSG layout sensor ](img/pmsg.png)
+### Onboard Peripherals & Pinout
+| Function                          | Pin / Address                  | Description                                      | Library / Notes                          |
+|-----------------------------------|--------------------------------|--------------------------------------------------|------------------------------------------|
+| Vibration Motor                   | D10 (GPIO10)                   | Feedback motor (haptic buzz / PWM tunes)         | Use `pmsg2vibrate.h` (included) or direct PWM |
+| 4x WS2812C-2020-V1 RGB LEDs       | D1 (GPIO1)                     | Programmable pixel display for animations        | `FastLED.h` or `Adafruit_NeoPixel.h` → `pmsg4pixeldisplay.h` (animations lib) |
+| SHT31 (Temp + Humidity)           | I²C 0x44                       | Sensirion temperature & humidity sensor          | On PCB                                   |
+| SGP41 (VOC + NOx / CO2 index)     | I²C 0x3? (usually 0x59)        | Sensirion air quality sensor                     | Not on all PCBs                          |
+| VEML7700                          | I²C 0x10                       | Ambient light (lux) sensor                       | `pmsg.h` helper                          |
+| LTR390                            | I²C 0x53                       | UV light sensor                                  |                                          |
+| LIS2DH12                          | I²C 0x19                       | Accelerometer / movement                         | `LIS2DH12.h`                             |
+| Battery Level                     | A0 (ADC)                       | Battery voltage → % power                        | Read ADC                                 |
+| Vibration/Touch Input Test        | A2 (ADC)                       | Capacitive touch/vibration sense test            |                                          |
+| Touch Input (ESP32-S3 only)       | D3                             | Dedicated touch pin                              |                                          |
+| IR Transmitter                    | D8                             | IR remote protocol (TV, airco, etc.)             | `IRremote.h`                             |
+| Push Button                       | D9 (GP1)                       | Onboard pushbutton for quick testing             |                                          |
+
 
 
