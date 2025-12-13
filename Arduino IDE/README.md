@@ -62,6 +62,10 @@ Many demos use **D9** as a general-purpose input for quick hardware checks.
 ## Quick Test Examples (Arduino IDE)
 These simple sketches verify your V4+ setup post-assembly.
 
+##Add this in Arduino IDE -> "settings..." -> " -> Additional boards manager URLs:
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+
+
 ### 1. Basic Blink & Serial (Hardware Check)
 ```cpp
 // Quick Test 1: Blink LED + Serial

@@ -1,5 +1,5 @@
 // Check arduino IDE 
-// add this in Arduino IDE -> "settin/Users/paul/Documents/PlatformIO/Projects/PMSG/Arduino IDE/easy setup/PMSGMusicAndLightFX/MusicAndLightFX.cpp /Users/paul/Documents/PlatformIO/Projects/PMSG/Arduino IDE/easy setup/PMSGMusicAndLightFX/MusicAndLightFX.hgs" -> "Additional boards manager URLs:
+// add this in Arduino IDE -> "settings..." -> "Additional boards manager URLs:
 // https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 // Go to Tools -> "Get board info"
 // Add Libarary manager this FastLED.h 
