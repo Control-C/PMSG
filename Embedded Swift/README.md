@@ -1,4 +1,6 @@
 By seeed studio see https://wiki.seeedstudio.com/xiao-esp32-swift/
+
+![PMSG Cool Glasses](/img/psmg_bril.png)
  
 # Makefile for PMSG Smart Glasses using Embedded Swift on Seeed Studio XIAO ESP32C6
 # This Makefile assumes:
