@@ -1,10 +1,9 @@
 By seeed studio see https://wiki.seeedstudio.com/xiao-esp32-swift/
 
-![PMSG Cool Glasses](img/psmg_bril.png)
-
-
  
 # Makefile for PMSG Smart Glasses using Embedded Swift on Seeed Studio XIAO ESP32C6
+![PMSG Cool Glasses](img/psmg_bril.png)
+
 # This Makefile assumes:
 # - ESP-IDF v5.2.1 is installed and sourced (source ~/esp-idf/export.sh or use 'get_idf' alias)
 # - Swift 6.0 toolchain is installed and in PATH
