@@ -1,6 +1,5 @@
-![PMSG Cool Glasses](/img/cool.png)
 # PMSG (P.M. Smart Glasses)
-
+![PMSG Cool Glasses](/img/cool.png)
 ## Flash custom firmware in minutes have fun using you PMSG in your way
 
 Flash custom firmware in minutes and build your smart glasses your way.
@@ -8,61 +7,27 @@ No vendor lock-in. Just hardware, code, and fun.
 
 👉 **Start with AI-guided setup  🤖 AI-Assisted Setup & Development**
 
-### 🟢 OpenAI – ChatGPT
-[Prompt for OpenAI – ChatGPT](https://chat.openai.com/?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors)
+[![Download Arduino IDE](https://img.shields.io/badge/Download-Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)](https://www.arduino.cc/en/software)
 
-Best for:
-- First-time setup
-- Arduino IDE examples
-- BLE, LEDs, vibration, sensors
-- Debugging & prototyping
+[![Ask ChatGPT](https://img.shields.io/badge/Ask_ChatGPT-Setup_Guide-10a37f?style=for-the-badge&logo=openai&logoColor=white)](https://chat.openai.com/?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors)
+[![Ask Gemini](https://img.shields.io/badge/Ask_Gemini-Setup_Guide-blue?style=for-the-badge&logo=google-gemini)](https://gemini.google.com/share?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors+and+explain+wiring)
+[![Ask Grok](https://img.shields.io/badge/Ask_Grok-AI_Setup-000000?style=for-the-badge&logo=x&logoColor=white)](https://grok.com/?q=Help+me+set+up+PMSG+from+this+repo%3A+https%3A%2F%2Fgithub.com%2FControl-C%2FPMSG%2Ftree%2Fmain%2FArduino%2520IDE.+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors.+Guide+me+through+the+setup%2C+including+BLE%2C+LEDs%2C+vibration%2C+and+sensors.&referrer=grok.com)
+[![Open in Cursor](https://img.shields.io/badge/Open_in-Cursor-ff6f00?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.sh)
 
 
-### 🟣 GitHub Copilot
-Use Copilot inside VS Code or GitHub Codespaces.
+[![PlatformIO](https://img.shields.io/badge/PlatformIO-Install-ff7f00?style=for-the-badge&logo=platformio&logoColor=white)](https://github.com/Control-C/PMSG/tree/main/PlatformIO)
 
-📦 PlatformIO project:
-https://github.com/Control-C/PMSG/tree/main/PlatformIO
 
 Recommended:
 - Open the PlatformIO folder
 - Let Copilot read `/ai/mcp/*.json` (if present)
 - Ask Copilot to respect XIAO board pinouts
 
----
-
-### 🔵 Grok (xAI)
-[Paste this into Grok:](https://grok.com/?q=Help+me+set+up+PMSG+from+this+repo%3A+https%3A%2F%2Fgithub.com%2FControl-C%2FPMSG%2Ftree%2Fmain%2FArduino%2520IDE.+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors.+Guide+me+through+the+setup%2C+including+BLE%2C+LEDs%2C+vibration%2C+and+sensors.&referrer=grok.com)
+[![GitHub Copilot](https://img.shields.io/badge/GitHub-Copilot-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/features/copilot)
 
 
-Use with:
-- Concept exploration
-- High-level architecture
-- Feature ideas
 
----
-
-### 🟠 Cursor IDE
-Cursor works best with full repository context.
-
-📂 Open repository root in Cursor  
-Ask:
-> “Help me build PMSG and read the hardware context from this repo.”
-
-Great for:
-- Refactoring
-- Firmware architecture
-- MCP-style JSON context
-
----
-
-### 🔴 Google Gemini
-
-[![Ask Gemini](https://img.shields.io/badge/Ask_Gemini-Setup_Guide-blue?style=for-the-badge&logo=google-gemini)](https://gemini.google.com/share?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors+and+explain+wiring)
-
----
-
-### 🍎 Apple Intelligence / Xcode (Embedded Swift)
+[![Xcode](https://img.shields.io/badge/Apple-Xcode-000000?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/Control-C/PMSG/tree/main/Embedded%20Swift)
 For Apple-centric workflows and Swift-based embedded experiments:
 
 📁 Embedded Swift (Xcode):
