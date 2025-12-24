@@ -73,8 +73,9 @@ For Apple-centric workflows and Swift-based embedded experiments.
 
 
 
-
+** DeepSeek:**
 // Not tested in china
+
 [![Open in DeepSeek](https://img.shields.io/badge/DeepSeek-PMSG_Assistant-10a37f)](https://chat.deepseek.com/share/wsvfx6rvhfl4b5t30x)
 
 
