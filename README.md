@@ -1,16 +1,7 @@
 ![PMSG Cool Glasses](/img/cool.png)
-
-██████╗ ███╗   ███╗ ███████╗ ██████╗ 
-██╔══██╗████╗ ████║ ██╔════╝██╔════╝ 
-██████╔╝██╔████╔██║ ███████╗██║  ███╗
-██╔═══╝ ██║╚██╔╝██║ ╚════██║██║   ██║
-██║     ██║ ╚═╝ ██║ ███████║╚██████╔╝
-╚═╝     ╚═╝     ╚═╝ ╚══════╝ ╚═════╝ 
-Personal Smart Monitoring Glasses
-
-# PMSG   (P.M. Smart Glasses ) Flash custom firmware in minutes have fun using you PMSG in your way
-
 # PMSG (P.M. Smart Glasses)
+
+## Flash custom firmware in minutes have fun using you PMSG in your way
 
 Flash custom firmware in minutes and build your smart glasses your way.
 No vendor lock-in. Just hardware, code, and fun.
@@ -40,6 +31,17 @@ Recommended:
 
 ---
 
+### 🔵 Grok (xAI)
+[Paste this into Grok:](https://grok.com/?q=Help+me+set+up+PMSG+from+this+repo%3A+https%3A%2F%2Fgithub.com%2FControl-C%2FPMSG%2Ftree%2Fmain%2FArduino%2520IDE.+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors.+Guide+me+through+the+setup%2C+including+BLE%2C+LEDs%2C+vibration%2C+and+sensors.&referrer=grok.com)
+
+
+Use with:
+- Concept exploration
+- High-level architecture
+- Feature ideas
+
+---
+
 ### 🟠 Cursor IDE
 Cursor works best with full repository context.
 
@@ -54,23 +56,9 @@ Great for:
 
 ---
 
-### 🔵 Grok (xAI)
-Paste this into Grok:
-
-> “Help me build PMSG from this repository and ask which XIAO board I use.”
-
-Use with:
-- Concept exploration
-- High-level architecture
-- Feature ideas
-
----
-
 ### 🔴 Google Gemini
-Paste the repository link and ask Gemini to:
-- Generate Arduino or PlatformIO code
-- Explain I²C wiring and libraries
-- Optimize power usage
+
+[![Ask Gemini](https://img.shields.io/badge/Ask_Gemini-Setup_Guide-blue?style=for-the-badge&logo=google-gemini)](https://gemini.google.com/share?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors+and+explain+wiring)
 
 ---
 
