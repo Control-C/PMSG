@@ -1,8 +1,9 @@
-// Poor Men's Smart Glasses (PMSG) by Paul Mooij
+// The single-board computer for on you face (PMSG) by Paul Mooij
 // Made by ChatGPT 4o
 
 // simple test via USB to check onboard sensors and buttons
 // *( A0 not connected, also 2,4Ghz ant. for wifi - BLE
+// check pmsg vesion and tech via AI-Setupguide
 
 // TODO
 // 1.1 You can add OLED display to make GoogleGlass style interface via USB
@@ -25,9 +26,9 @@
 // Sensor and pin definitions
 BH1721FVC luxSensor;
 ClosedCube_HDC1080 hdc1080;
-
+// pmsg version 3 only 
 const int button1Pin = D8;   // Button 1
-const int button2Pin = D10;  // Button 2
+const int button2Pin = D10;  // Button 2 only v2 and v3 !!!  v4 andh higher this is vibration motor 
 const int batteryPin = A0;   // Battery voltage monitor
 
 // Variables to store sensor data
