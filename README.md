@@ -28,7 +28,7 @@ Each option opens a pre-configured prompt tailored to your hardware and project.
 2. Follow the AI’s prompts to select your **XIAO board** and **I²C sensors**.  
 3. Get step-by-step guidance for **BLE, LEDs, vibration, and more**.  
 
-> 💡 Tip: You can try multiple AIs to compare instructions or get alternative approaches.
+> 💡 Tip: You can try multiple AIs to compare instructions or get alternative approaches. And Don’t forget your towel! Just like in Hitchhiker’s Guide. Use this as a reminder while exploring AI ✨ galaxy setup always think 42 is awnser. - Paul Stefaan Mooij 2025
 
 **How to use:**  
 1. Click the badge for your preferred AI.  
