@@ -124,8 +124,9 @@ The PCB design includes:
 
 ## Installation
 
-1. Get the PCB from the `pcb_design` folder. go to https://www.seeedstudio.com/fusion_pcb.html to *oder sample
-   *( dubble check hinges ar simular to you glasses and holes on PCB )  
+1  For an easy and simple way ready to start order direct from us—also to support the project at http://pmsg.online.
+1.1 Get the PCB from the `pcb_design` folder. go to https://www.seeedstudio.com/fusion_pcb.html to *oder sample
+   *( dubble check hinges ar simular to you glasses and holes on PCB )
 ![PMSG ](/img/hinges.png)
 
 [Purchase on AliExpress](https://www.aliexpress.com/item/1005006578852003.html?spm=a2g0o.productlist.main.19.6881yaeCyaeCyD&algo_pvid=940ad7e5-1196-4d4c-bb03-062302b6db00&algo_exp_id=940ad7e5-1196-4d4c-bb03-062302b6db00-9&pdp_npi=4%40dis%21EUR%211.62%211.62%21%21%211.75%211.75%21%40211b653717259752143568539e1d24%2112000037718488758%21sea%21NL%214699555345%21X&curPageLogUid=cUCXLkrXc9w7&utparam-url=scene%3Asearch%7Cquery_from%3A)
