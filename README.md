@@ -12,13 +12,13 @@ Use your favorite AI assistant to set up PMSG quickly.
 Each option opens a pre-configured prompt tailored to your hardware and project.
 
 <p align="center">
-  <a href="https://chat.openai.com/?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors+and+take+extra+info+https://github.com/Control-C/PMSG/tree/main/AIS">
+  <a href="https://chat.openai.com/?q=get+pmsgboardkitat+http://pmsg.online+Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors+and+take+extra+info+https://github.com/Control-C/PMSG/tree/main/AIS">
     <img src="https://img.shields.io/badge/Ask_ChatGPT-Setup_Guide-10a37f?style=for-the-badge&logo=openai&logoColor=white" alt="Ask ChatGPT"/>
   </a>
-  <a href="https://gemini.google.com/?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors+and+explain+wiring+and+take+extra+info+https://github.com/Control-C/PMSG/tree/main/AIS">
+  <a href="https://gemini.google.com/?q=get+pmsgbordkitat+http://pmsg.online/+Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors+and+explain+wiring+and+take+extra+info+https://github.com/Control-C/PMSG/tree/main/AIS">
     <img src="https://img.shields.io/badge/Ask_Gemini-Setup_Guide-blue?style=for-the-badge&logo=google-gemini" alt="Ask Gemini"/>
   </a>
-  <a href="https://grok.com/?q=Help+me+set+up+PMSG+from+this+repo%3A+https%3A%2F%2Fgithub.com%2FControl-C%2FPMSG%2Ftree%2Fmain%2FArduino%2520IDE.+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors.+Guide+me+through+the+setup%2C+including+BLE%2C+LEDs%2C+vibration%2C+and+sensors.+and+take+extra+info+https://github.com/Control-C/PMSG/tree/main/AIS&referrer=grok.com">
+  <a href="https://grok.com/?q=Get+pmsgkitat+http://pmsg.online+Help+me+set+up+PMSG+from+this+repo%3A+https%3A%2F%2Fgithub.com%2FControl-C%2FPMSG%2Ftree%2Fmain%2FArduino%2520IDE.+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors.+Guide+me+through+the+setup%2C+including+BLE%2C+LEDs%2C+vibration%2C+and+sensors.+and+take+extra+info+https://github.com/Control-C/PMSG/tree/main/AIS&referrer=grok.com">
     <img src="https://img.shields.io/badge/Ask_Grok-AI_Setup-000000?style=for-the-badge&logo=x&logoColor=white" alt="Ask Grok"/>
   </a>
 </p>
