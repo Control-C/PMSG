@@ -1,1 +1,107 @@
-
+{
+  "board_family": "PMSG",
+  "description": "I2C sensor database for PMSG v2, v3, v4, SMD, and custom variants. Note: Not all versions have the same sensors mounted, brand may vary.",
+  "compatible_platforms": ["Meshtastic", "Seeed SenseCraft", "Generic I2C"],
+  "notes": "Default I2C pins are D4/D5 on Xiao boards. For Adafruit QT Py ESP32 and QT Py RP2040, default pins are also D4/D5. Warning: Double-check pinout if using generic/unbranded Xiao boards.",
+  "i2c_devices": [
+    {
+      "board_version": "PMSGv4",
+      "xiao_type": "Seeed XIAO ESP32-S3",
+      "pin": "D4/D5",
+      "address": "0x38",
+      "name": "VEML6070",
+      "brand": null,
+      "type": "UV",
+      "lib": null,
+      "notes": "I2C 3.3V, may not be present on all boards"
+    },
+    {
+      "board_version": "PMSGv4",
+      "xiao_type": "Seeed XIAO ESP32-S3",
+      "pin": "D4/D5",
+      "address": "0x3?",
+      "name": "SGP41",
+      "brand": "Sensirion",
+      "type": "Air Quality / CO2",
+      "lib": "SGP30",
+      "notes": "Not on PCB by default, may be present on some versions"
+    },
+    {
+      "board_version": "PMSGv3",
+      "xiao_type": "Adafruit QT Py ESP32",
+      "pin": "D4/D5",
+      "address": "0x6a",
+      "name": "6-axis motion sensor",
+      "brand": null,
+      "type": "Movement",
+      "lib": null,
+      "notes": "I2C 3.3V, optional on different boards"
+    },
+    {
+      "board_version": "PMSGv4TTC ESP32",
+      "xiao_type": "Adafruit QT Py RP2040",
+      "pin": "D4/D5",
+      "address": "0x23",
+      "name": "LUX sensor",
+      "brand": null,
+      "type": "Light",
+      "lib": null,
+      "notes": "Optional, may differ by version"
+    },
+    {
+      "board_version": "PMSGv4",
+      "xiao_type": "Seeed XIAO ESP32-S3",
+      "pin": "D4/D5",
+      "address": "0x10",
+      "name": "VEML7700-TR",
+      "brand": null,
+      "type": "Lux",
+      "lib": "pmsg.h",
+      "notes": "I2C 3.3V, optional"
+    },
+    {
+      "board_version": "PMSGv4TTC ESP32",
+      "xiao_type": "Adafruit QT Py ESP32",
+      "pin": "D4/D5",
+      "address": "0x53",
+      "name": "LTR390",
+      "brand": null,
+      "type": "UV",
+      "lib": null,
+      "notes": "Optional, version dependent"
+    },
+    {
+      "board_version": "PMSGv4",
+      "xiao_type": "Seeed XIAO ESP32-S3",
+      "pin": "D4/D5",
+      "address": "0x19",
+      "name": "LIS2DH12",
+      "brand": null,
+      "type": "Movement",
+      "lib": "Lis2DH12.h",
+      "notes": "Optional, version dependent"
+    },
+    {
+      "board_version": "PMSGv4",
+      "xiao_type": "Seeed XIAO ESP32-S3",
+      "pin": "D4/D5",
+      "address": null,
+      "name": "Grove OLED Display 0.96\"",
+      "brand": "Seeed",
+      "type": "Display",
+      "lib": null,
+      "notes": "Optional, I2C 3.3V, see wiki: https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/"
+    },
+    {
+      "board_version": "PMSGv4",
+      "xiao_type": "Generic Xiao",
+      "pin": "D4/D5",
+      "address": "0x44",
+      "name": "Sh31",
+      "brand": "Sensirion",
+      "type": "Temp / Humidity",
+      "lib": null,
+      "notes": "Not on PCB by default, may be added manually. Double-check pins on generic boards!"
+    }
+  ]
+}
