@@ -1,6 +1,93 @@
+![PMSG Cool Glasses](/img/cool.png)
+
+██████╗ ███╗   ███╗ ███████╗ ██████╗ 
+██╔══██╗████╗ ████║ ██╔════╝██╔════╝ 
+██████╔╝██╔████╔██║ ███████╗██║  ███╗
+██╔═══╝ ██║╚██╔╝██║ ╚════██║██║   ██║
+██║     ██║ ╚═╝ ██║ ███████║╚██████╔╝
+╚═╝     ╚═╝     ╚═╝ ╚══════╝ ╚═════╝ 
+Personal Smart Monitoring Glasses
+
 # PMSG   (P.M. Smart Glasses ) Flash custom firmware in minutes have fun using you PMSG in your way
 
-![PMSG Cool Glasses](/img/cool.png)
+# PMSG (P.M. Smart Glasses)
+
+Flash custom firmware in minutes and build your smart glasses your way.
+No vendor lock-in. Just hardware, code, and fun.
+
+👉 **Start with AI-guided setup  🤖 AI-Assisted Setup & Development**
+
+### 🟢 OpenAI – ChatGPT
+[Prompt for OpenAI – ChatGPT](https://chat.openai.com/?q=Guide+me+to+set+up+PMSG+from+this+repo:+https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors)
+
+Best for:
+- First-time setup
+- Arduino IDE examples
+- BLE, LEDs, vibration, sensors
+- Debugging & prototyping
+
+
+### 🟣 GitHub Copilot
+Use Copilot inside VS Code or GitHub Codespaces.
+
+📦 PlatformIO project:
+https://github.com/Control-C/PMSG/tree/main/PlatformIO
+
+Recommended:
+- Open the PlatformIO folder
+- Let Copilot read `/ai/mcp/*.json` (if present)
+- Ask Copilot to respect XIAO board pinouts
+
+---
+
+### 🟠 Cursor IDE
+Cursor works best with full repository context.
+
+📂 Open repository root in Cursor  
+Ask:
+> “Help me build PMSG and read the hardware context from this repo.”
+
+Great for:
+- Refactoring
+- Firmware architecture
+- MCP-style JSON context
+
+---
+
+### 🔵 Grok (xAI)
+Paste this into Grok:
+
+> “Help me build PMSG from this repository and ask which XIAO board I use.”
+
+Use with:
+- Concept exploration
+- High-level architecture
+- Feature ideas
+
+---
+
+### 🔴 Google Gemini
+Paste the repository link and ask Gemini to:
+- Generate Arduino or PlatformIO code
+- Explain I²C wiring and libraries
+- Optimize power usage
+
+---
+
+### 🍎 Apple Intelligence / Xcode (Embedded Swift)
+For Apple-centric workflows and Swift-based embedded experiments:
+
+📁 Embedded Swift (Xcode):
+https://github.com/Control-C/PMSG/tree/main/Embedded%20Swift
+
+Best for:
+- Swift-based firmware experiments
+- Apple ecosystem integrations
+- Future Apple Intelligence workflows
+
+> 💡 Tip  
+> Always tell the AI which **Seeed Studio XIAO board** you are using  
+> and whether you have **I²C sensors** connected.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 ## Future Updates: PMSG v4 and Beyond
