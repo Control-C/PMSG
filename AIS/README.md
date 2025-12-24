@@ -1,4 +1,4 @@
-AIS “AI-Setup guid” Instructions – PMSG AI-Assisted Development
+AIS “AI-Setup guide” Instructions – PMSG AI-Assisted Development
 > 🛸 Tip: Don’t forget your towel! Just like in Hitchhiker’s Guide. Use this as a reminder while exploring AI setup always think 42 is awnser. - Paul Stefaan Mooij 2025
 
 
@@ -17,7 +17,7 @@ AI tools can use the files in this folder as **structured context** to provide a
 
 ---
 
-## 👉 Start with AI-SetupGuided Setup 🤖
+## 👉 Start with AI-SetupGuide Setup 🤖
 
 Use your favorite AI assistant to set up PMSG quickly.  
 Each option opens a pre-configured prompt tailored to your hardware and project.
