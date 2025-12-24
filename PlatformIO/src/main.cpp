@@ -1,5 +1,6 @@
 // The single-board computer for on you face (PMSG) by Paul Mooij
 // Made by ChatGPT 4o
+// Use AI-Setupguide to udpate this code or let Agent help you out
 
 // simple test via USB to check onboard sensors and buttons
 // *( A0 not connected, also 2,4Ghz ant. for wifi - BLE
