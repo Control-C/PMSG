@@ -4,13 +4,104 @@
       "name": "XIAO ESP32C3",
       "mcu": "ESP32-C3",
       "ble": true,
-      "i2c_default_pins": { "sda": 6, "scl": 7 }
+      "i2c_default_pins": { "sda": 6, "scl": 7 },
+      "default_pins": [
+        {
+          "pin": "D0",
+          "function": "Battery level meter",
+          "type": "ADC",
+          "notes": "Special wire solder may be needed"
+        },
+        {
+          "pin": "D1",
+          "function": "1-2-3-4 pixel pRGB",
+          "model": "IC-RGB WS2812C-2020-V1",
+          "type": "Digital wire",
+          "lib": "FastLED.h",
+          "notes": "Standard digital PWM output for RGB pixels"
+        },
+        {
+          "pin": "D2",
+          "function": "Experimental feedback vibration motor",
+          "type": "ADC",
+          "lib": null
+        },
+        {
+          "pin": "D3",
+          "function": "TouchRead",
+          "type": "Touch",
+          "notes": "Label: D3 (also A3), GPIO: 4, Touch Channel: Touch4Only ESP32-S3",
+          "url": "https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/"
+        },
+        {
+          "pin": "D8",
+          "function": "IR remote for TV / Airco",
+          "model": "TSML1020, 940 nm",
+          "brand": "Vishay",
+          "type": "PWM",
+          "lib": "IRremote.h",
+          "url": "https://www.vishay.com/docs/81033/tsml1000.pdf"
+        },
+        {
+          "pin": "D9",
+          "function": "Push button",
+          "type": "GPIO"
+        },
+        {
+          "pin": "D10",
+          "function": "Vibration motor",
+          "type": "PWM",
+          "lib": "PMSG.H",
+          "seeed_id": "105020003",
+          "notes": "All coil / spring types supported"
+        }
+      ]
     },
     {
       "name": "XIAO nRF52840",
       "mcu": "nRF52840",
       "ble": true,
-      "i2c_default_pins": { "sda": 4, "scl": 5 }
+      "i2c_default_pins": { "sda": 4, "scl": 5 },
+      "default_pins": [
+        {
+          "pin": "D0",
+          "function": "Battery level meter",
+          "type": "ADC"
+        },
+        {
+          "pin": "D1",
+          "function": "1-2-3-4 pixel pRGB",
+          "type": "Digital wire",
+          "lib": "FastLED.h"
+        },
+        {
+          "pin": "D2",
+          "function": "Experimental feedback vibration motor",
+          "type": "ADC"
+        },
+        {
+          "pin": "D3",
+          "function": "TouchRead",
+          "type": "Touch"
+        },
+        {
+          "pin": "D8",
+          "function": "IR remote for TV / Airco",
+          "type": "PWM",
+          "lib": "IRremote.h"
+        },
+        {
+          "pin": "D9",
+          "function": "Push button",
+          "type": "GPIO"
+        },
+        {
+          "pin": "D10",
+          "function": "Vibration motor",
+          "type": "PWM",
+          "lib": "PMSG.H"
+        }
+      ]
     }
   ]
 }
