@@ -1,1 +1,161 @@
-TODO
+{
+  "board": "PMSG v4 LoRa ESP32 TTN",
+  "description": "Pinout, sensors, and libraries for PMSG v4 using XIAO ESP32-S3",
+  "pins": [
+    {
+      "pin": "D0",
+      "name": "Battery level meter",
+      "type": "ADC",
+      "model": null,
+      "brand": null,
+      "lib": null,
+      "seeed_id": null,
+      "notes": "Special wire solder needed"
+    },
+    {
+      "pin": "D1",
+      "name": "IC-RGB WS2812C-2020-V1",
+      "type": "Digital / PWM",
+      "model": "WS2812C-2020-V1",
+      "brand": null,
+      "lib": "FastLED.h",
+      "seeed_id": null,
+      "notes": "1-4 pixel pRGB"
+    },
+    {
+      "pin": "D2",
+      "name": "Feedback vibration motor (experimental)",
+      "type": "ADC / PWM",
+      "model": "Vibration coil/spring",
+      "brand": null,
+      "lib": "PMSG.h",
+      "seeed_id": null,
+      "notes": "Experimental vibration feedback"
+    },
+    {
+      "pin": "D3",
+      "name": "Touch input (ESP32-S3 only)",
+      "type": "Touch",
+      "model": null,
+      "brand": null,
+      "lib": null,
+      "seeed_id": null,
+      "notes": "Touch channel 4 only; see https://randomnerdtutorials.com/esp32-touch-pins-arduino-ide/"
+    },
+    {
+      "pin": "D8",
+      "name": "IR remote",
+      "type": "PWM",
+      "model": "TSML1020, 940nm",
+      "brand": "Vishay",
+      "lib": "IRremote.h",
+      "seeed_id": null,
+      "notes": "For TV / Airco remote; datasheet: https://www.vishay.com/docs/81033/tsml1000.pdf"
+    },
+    {
+      "pin": "D9",
+      "name": "Push button",
+      "type": "GPIO",
+      "model": null,
+      "brand": null,
+      "lib": null,
+      "seeed_id": null,
+      "notes": null
+    },
+    {
+      "pin": "D10",
+      "name": "Vibration motor output",
+      "type": "PWM",
+      "model": "Vibration coil/spring",
+      "brand": null,
+      "lib": "PMSG.h",
+      "seeed_id": "105020003",
+      "notes": null
+    },
+    {
+      "pin": "D4/D5",
+      "name": "I2C SDA/SCL",
+      "type": "I2C",
+      "model": null,
+      "brand": null,
+      "lib": null,
+      "seeed_id": null,
+      "notes": "Default I2C pins"
+    },
+    {
+      "pin": "D6/D7",
+      "name": "UART1 TX/RX",
+      "type": "UART",
+      "model": null,
+      "brand": null,
+      "lib": null,
+      "seeed_id": null,
+      "notes": "Default UART1 pins"
+    }
+  ],
+  "i2c_sensors": [
+    {
+      "address": "0x10",
+      "name": "VEML7700-TR",
+      "type": "Lux",
+      "lib": "pmsg.h",
+      "notes": "I2C 3.3V"
+    },
+    {
+      "address": "0x53",
+      "name": "LTR390",
+      "type": "UV",
+      "lib": null,
+      "notes": "I2C 3.3V"
+    },
+    {
+      "address": "0x19",
+      "name": "LIS2DH12",
+      "type": "Movement",
+      "lib": "Lis2DH12.h",
+      "notes": "I2C 3.3V"
+    },
+    {
+      "address": "0x44",
+      "name": "Sh31",
+      "type": "Temp/Humidity",
+      "lib": null,
+      "notes": "Sensirion, not on PCB"
+    },
+    {
+      "address": "0x3?",
+      "name": "SGP41",
+      "type": "CO2",
+      "lib": null,
+      "notes": "Sensirion, not on PCB"
+    },
+    {
+      "address": "0x38",
+      "name": "VEML6070",
+      "type": "UV",
+      "lib": null,
+      "notes": "I2C 3.3V"
+    },
+    {
+      "address": "0x23",
+      "name": "LUX",
+      "type": "Light",
+      "lib": null,
+      "notes": "I2C 3.3V"
+    },
+    {
+      "address": "0x6a",
+      "name": "6-axis movement sensor",
+      "type": "Movement",
+      "lib": null,
+      "notes": "I2C 3.3V"
+    },
+    {
+      "address": null,
+      "name": "Grove OLED Display 0.96\"",
+      "type": "Display",
+      "lib": null,
+      "notes": "I2C 3.3V, see https://wiki.seeedstudio.com/Grove-OLED_Display_0.96inch/"
+    }
+  ]
+}
