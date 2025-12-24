@@ -1,0 +1,12 @@
+{
+  "arduino": {
+    "ble": [
+      "ArduinoBLE",
+      "NimBLE-Arduino"
+    ],
+    "led": [
+      "FastLED",
+      "Adafruit NeoPixel"
+    ]
+  }
+}
