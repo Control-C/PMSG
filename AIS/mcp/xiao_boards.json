@@ -1,0 +1,16 @@
+{
+  "boards": [
+    {
+      "name": "XIAO ESP32C3",
+      "mcu": "ESP32-C3",
+      "ble": true,
+      "i2c_default_pins": { "sda": 6, "scl": 7 }
+    },
+    {
+      "name": "XIAO nRF52840",
+      "mcu": "nRF52840",
+      "ble": true,
+      "i2c_default_pins": { "sda": 4, "scl": 5 }
+    }
+  ]
+}
