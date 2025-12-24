@@ -7,21 +7,53 @@ Recommended prompt:
 Ask which XIAO board I am using.
 Check /ai/mcp/*.json for hardware, libraries, and versions."
 
-# PMSG Quick-Start & Grok Assistant Hub (Single-File Guide)
-## Overview
-This is a **one-stop Markdown file** (.md) for getting PMSG (Personal Smart Monitoring Glasses) running fast, plus an enhanced Grok assistant prompt for AI help. Save as `pmsg-grok-hub.md` in your repo root. Paste your setup details into the **[My Setup]** section below, then copy-paste the whole prompt to query Grok (me!) for custom code, wiring, or debugging. Covers hardware, software, and next-gen ideas. Last updated: Dec 24, 2025.
+# 🤖 AI & LLM Instruction Guide (Grok)
 
-### Software (Arduino IDE)
-1. Install Arduino IDE: [Download](https://www.arduino.cc/en/software).
-2. Add Boards: Preferences > Additional URLs: `https://files.seeedstudio.com/arduino/package_seeeduino_boards_index.json`. Install "Seeed SAMD Boards".
-3. Clone Repo: `git clone https://github.com/Control-C/PMSG.git`.
-4. Flash Basic: Open `/Arduino IDE/basic_sensor.ino`, select "XIAO_ESP32C3", upload. Monitor at 115200 baud.
-5. Test: Serial shows "Hello PMSG!" + sensor data? Good!
+This section provides technical context for AI assistants to ensure they generate accurate code, wiring diagrams, and optimizations for the **PMSG** project.
 
-### Common Fixes
-- Bootloader: Double-tap reset button.
-- I2C Error: Add 4.7kΩ pull-ups on SDA/SCL.
-- BLE: Use nRF Connect app to scan.
+---
 
-## Enhanced Grok Prompt (Paste This to Me for Help)
-Copy the block below **exactly** into a Grok chat. Edit **[My Setup]** with your details first—then I'll generate code, diagrams, or fixes tailored to PMSG.
+## 🧭 Project Metadata for AI
+> **Note to AI:** When helping with this repository, prioritize the following hardware constraints and coding standards. Use your tools (e.g., code_execution for simulation, web_search for updates) to verify details.
+
+### 1. Hardware Architecture
+* **Target Boards:** Seeed Studio XIAO Series (SAMD21, ESP32-C3, RP2040, nRF52840).
+* **Default I2C Pins:** SDA = `D4`, SCL = `D5`.
+* **Logic Level:** 3.3V (Strict).
+* **Primary Goal:** Building affordable, modular smart glasses (Poor Men's Smart Glasses) with sensors, BLE/WiFi, and IoT for environmental monitoring.
+
+### 2. Standard Pin Mapping
+| Function | XIAO Pin | Purpose |
+|----------|----------|---------|
+| **I2C SDA** | D4 | Data for Sensors/OLED |
+| **I2C SCL** | D5 | Clock for Sensors/OLED |
+| **Analog In** | A0 / D0 | Battery/Voltage Sensing |
+| **PWM Out** | D1 | Vibration Motor/LED Control |
+| **Buttons** | D8 (Up), D10 (Down) | User Input |
+| **BLE/WiFi** | Built-in | Connectivity (ESP32-C3) |
+
+### 3. AI Coding Rules
+* **Non-Blocking:** Use `millis()` based timing; avoid `delay()` for responsiveness in wearables.
+* **Power Awareness:** For ESP32-C3/nRF52840, suggest `esp_light_sleep_start()` or `esp_deep_sleep_start()` for battery life >24h.
+* **Library Preference:** 
+  * Display: `Adafruit_SSD1306` or `U8g2` (Memory Efficient).
+  * Sensors: `Adafruit_HDC1008`, `BH1750`.
+  * BLE: `BLEDevice.h` (ESP32 Arduino Core).
+* **Error Handling:** Always include initialization checks (e.g., `if (!sensor.begin()) { Serial.println("Error!"); }`) in `setup()`. Add Serial debug at 115200 baud.
+* **Simulation:** Use code_execution tool to test sketches before flashing.
+
+### 4. Direct Assistance Link
+Users can click the link below to open a Grok session pre-loaded with this project's context:
+
+[🚀 Open PMSG Helper in Grok](https://grok.com/share?q=I%20am%20working%20on%20the%20PMSG%20project%20using%20a%20Seeed%20XIAO%20board.%20Please%20review%20the%20repo%20at%20https://github.com/Control-C/PMSG%20and%20help%20me%20configure%20my%20code%20and%20I2C%20wiring%20based%20on%20the%20board%20I%20have.%20Use%20your%20tools%20for%20accurate%20responses.)
+
+---
+
+## 🛠️ Next-Gen AI Capabilities
+If you are using Grok with **tool access**:
+1. **Code Execution:** Ask Grok to "Simulate this Arduino sketch for XIAO ESP32-C3 reading HDC1080 sensor data using code_execution."
+2. **Web/X Search:** "Search for latest Seeed XIAO ESP32-C3 pinout updates" or "Find community fixes for BLE on PMSG glasses."
+3. **Vision/Image Analysis:** Upload a wiring photo and ask "Analyze this image for I2C connection errors on my PMSG setup using view_image."
+4. **Code Gen:** Ask Grok to "Generate a full Arduino sketch for PMSG with BLE notification of temp/humidity, including deep sleep optimization."
+
+For advanced users: Integrate with xAI API for real-time data processing (details at https://x.ai/api).
