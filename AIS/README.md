@@ -1,4 +1,4 @@
-AIS “Setup with AI” Instructions – PMSG AI-Assisted Development
+AIS “AI-Setup guid” Instructions – PMSG AI-Assisted Development
 
 This folder enables AI-assisted setup, development, and debugging for the **PMSG (Personal Smart Monitoring Glasses)** project.
 
@@ -15,7 +15,7 @@ AI tools can use the files in this folder as **structured context** to provide a
 
 ---
 
-## 👉 Start with AI-Guided Setup 🤖
+## 👉 Start with AI-SetupGuided Setup 🤖
 
 Use your favorite AI assistant to set up PMSG quickly.  
 Each option opens a pre-configured prompt tailored to your hardware and project.
