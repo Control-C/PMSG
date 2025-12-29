@@ -6,7 +6,7 @@
   "new_install_prompt_erase": true,
   "builds": [
     {
-      "chipFamily": "ESP32c6",
+      "chipFamily": "ESP32-C6",
       "parts": [
         {
           "path": "pmsg-proxilens-c6-v4.bin",
