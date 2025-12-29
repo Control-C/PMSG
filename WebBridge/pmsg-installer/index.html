@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PMSG Firmware Installer</title>
+
+  <!-- ESP Web Tools -->
+  <script
+    type="module"
+    src="https://unpkg.com/esp-web-tools@9/dist/web/install-button.js">
+  </script>
+
+  <style>
+    body {
+      background: #000;
+      color: #fff;
+      font-family: system-ui, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .card {
+      max-width: 420px;
+      padding: 32px;
+      border: 1px solid #333;
+      border-radius: 16px;
+      background: #0b0b0b;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    p {
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>PMSG Firmware Installer 👓</h1>
+
+    <p>
+      Flash your PMSG device directly from the browser.<br>
+      No apps. No drivers. Just Chrome.
+    </p>
+
+    <br>
+
+    <esp-web-install-button
+      manifest="manifest.json">
+    </esp-web-install-button>
+
+    <p style="margin-top:20px;font-size:0.8rem;opacity:0.6">
+      Supported: ESP32-S3 / ESP32-C3
+    </p>
+  </div>
+</body>
+</html>
