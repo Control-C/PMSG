@@ -1,0 +1,18 @@
+{
+  "name": "PMSG Smart Glasses",
+  "version": "1.0.0",
+  "domain": "pmsg",
+  "funding_url": "https://pmsg.2qr.at",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32c6",
+      "parts": [
+        {
+          "path": "pmsg-firmware29122925.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}
