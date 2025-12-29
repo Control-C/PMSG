@@ -1,0 +1,15 @@
+{
+  "name": "PMSG Firmware",
+  "version": "1.0.0",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [{ "path": "bin/pmsg-s3.bin", "offset": 0 }]
+    },
+    {
+      "chipFamily": "ESP32-C6",
+      "parts": [{ "path": "bin/pmsg-c6.bin", "offset": 0 }]
+    }
+  ]
+}
