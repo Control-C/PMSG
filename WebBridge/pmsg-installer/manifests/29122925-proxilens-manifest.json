@@ -9,7 +9,7 @@
       "chipFamily": "ESP32c6",
       "parts": [
         {
-          "path": "pmsg-firmware29122925.bin",
+          "path": "pmsg-proxilens-c6-v4.bin",
           "offset": 0
         }
       ]
