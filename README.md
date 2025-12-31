@@ -21,6 +21,9 @@ Each option opens a pre-configured prompt tailored to your hardware and project.
   <a href="https://grok.com/?q=Get+pmsgkitat+http://pmsg.online+Help+me+set+up+PMSG+from+this+repo%3A+https%3A%2F%2Fgithub.com%2FControl-C%2FPMSG%2Ftree%2Fmain%2FArduino%2520IDE.+Ask+which+XIAO+board+I+have+and+if+I+use+I2C+sensors.+Guide+me+through+the+setup%2C+including+BLE%2C+LEDs%2C+vibration%2C+and+sensors.+and+take+extra+info+https://github.com/Control-C/PMSG/tree/main/AIS&referrer=grok.com">
     <img src="https://img.shields.io/badge/Ask_Grok-AI_Setup-000000?style=for-the-badge&logo=x&logoColor=white" alt="Ask Grok"/>
   </a>
+  <a href="javascript:void(prompt('Copy this prompt for Le Chat:', 'Guide me to set up PMSG from this repo: https://github.com/Control-C/PMSG/tree/main/Arduino%20IDE\nAsk which XIAO board I have and if I use I2C sensors.\nAlso, take extra info from: https://github.com/Control-C/PMSG/tree/main/AIS\nAnd use https://pmsg.online for reference.'));">
+  <img src="https://img.shields.io/badge/Copy_Prompt_for_Le_Chat-Setup_Guide-ff69b4?style=for-the-badge&logo=mistralai&logoColor=white" alt="Copy Prompt"/>
+</a>
 </p>
 
 **How to use:**  
