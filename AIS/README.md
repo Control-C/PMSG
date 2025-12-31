@@ -1,5 +1,5 @@
 AIS “AI-Setup guide” Instructions – PMSG AI-Assisted Development
-> 🛸 Tip: Don’t forget your towel! Just like in Hitchhiker’s Guide. Use this as a reminder while exploring AI setup always think 42 is awnser. - Paul Stefaan Mooij 2025
+> 🛸 Tip: Don’t forget your towel! Just like in Hitchhiker’s Guide. Use this as a reminder while exploring AI setup always think 42 is anwser. - Paul Stefaan Mooij 2025
 
 
 This folder enables AI-assisted setup, development, and debugging for the **PMSG (Personal Smart Monitoring Glasses)** project.
