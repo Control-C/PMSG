@@ -33,6 +33,10 @@ Users can click the link below to open a Gemini session pre-loaded with this pro
 
 [🚀 Open PMSG Helper in Gemini](https://gemini.google.com/share?q=I+am+working+on+the+PMSG+project+using+a+Seeed+XIAO+board.+Please+review+the+repo+at+https://github.com/Control-C/PMSG/tree/main/Arduino+IDE+and+help+me+configure+my+code+and+I2C+wiring+based+on+the+board+I+have.)
 
+update used this :Gems Gemini Apps
+https://gemini.google.com/gem/1Hbn7N0X7nBb2Egw54Rex0iQe2veH4cP_?usp=sharing
+
+
 ---
 
 ## 🛠️ Next-Gen AI Capabilities
