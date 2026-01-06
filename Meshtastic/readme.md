@@ -9,8 +9,8 @@ This project lets you run a **Meshtastic LoRa node** with:
 ✅ Vibration motor & push button I/O  
 ✅ Optional uplink to **The Things Network (TTN)** via wifi api / MQTT *( not good for you batt ) esp version 
 
-📌 Based on Meshtastic firmware and community examples.  [oai_citation:0‡GitHub](https://github.com/meshtastic/Meshtastic-arduino/blob/master/README.md?utm_source=chatgpt.com)
-
+📌 Based on Meshtastic firmware and community examples.  
+https://meshtastic.org/docs/configuration/module/telemetry/
 ---
 
 ## 📦 Hardware & Wiring
