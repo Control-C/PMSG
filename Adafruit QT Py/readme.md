@@ -8,6 +8,13 @@ PMSG GPIO examples.
 
 ---
 
+## PMSG + QT Py Hardware
+
+
+![PMSG QT Py Assembled](https://raw.githubusercontent.com/Control-C/PMSG/main/img/qtpypmsg.png)
+
+---
+
 ## Supported Boards
 
 - Adafruit QT Py (SAMD21 / RP2040 / ESP32-S2 / ESP32-S3)
@@ -15,7 +22,7 @@ PMSG GPIO examples.
 
 > ⚠️ Always select the **exact board model** when installing CircuitPython.  
 > Pin naming and capabilities differ per board.
-
+![PMSG QT Py Front](https://raw.githubusercontent.com/Control-C/PMSG/main/img/qtpy-pmsg.png)
 ---
 
 ## Pin Configuration (PMSG Default)
