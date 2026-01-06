@@ -1,5 +1,7 @@
-# 🛰️ PMSGv4 Meshtastic LoRa Node  
+# 🛰️ PMSGv4 Meshtastic LoRa Node - bassed of Seeedstudio 
+https://wiki.seeedstudio.com/meshtastic_introduction
 **Arduino / PlatformIO Example for ESP32-C LoRa & Seeed XIAO LoRa / nRF + Sensor Expansion**
+https://wiki.seeedstudio.com/xiao_esp32s3_&_wio_SX1262_kit_for_meshtastic_main_page/
 
 This project lets you run a **Meshtastic LoRa node** with:
 
