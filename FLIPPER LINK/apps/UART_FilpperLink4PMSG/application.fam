@@ -1,0 +1,8 @@
+App(
+    appid="pmsg_uart_remote",
+    name="PMSG UART Remote",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="pmsg_uart_remote_app",
+    cdefines=["APP_PMSG_UART_REMOTE"],
+    requires=["gui", "furi"],
+)
