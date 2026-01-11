@@ -65,3 +65,41 @@ Limitations:
 
 ```json
 {"p":"pmsg","v":1,"t":"cmd","id":14,"seq":12,"arg":120}
+
+Field
+Meaning
+p
+protocol magic ("pmsg")
+v
+version (1)
+t
+type (cmd)
+id
+numeric command ID
+seq
+sequence number
+arg
+optional argument
+
+3.2 ACK / ERR (PMSG → Controller)
+
+
+'''ACK:
+```json
+{"p":"pmsg","v":1,"t":"ack","seq":12,"ok":1}
+
+'''Error:
+```json
+{"p":"pmsg","v":1,"t":"ack","seq":12,"ok":0,"err":"unknown_cmd"}
+
+3.3 Sensor / Event (PMSG → Controller)
+```json
+{"p":"pmsg","v":1,"t":"evt","name":"lux","seq":12,"val":123.4,"unit":"lx"}
+
+
+Event push:
+
+''' 
+{"p":"pmsg","v":1,"t":"evt","name":"tap","val":2,"unit":"count"}
+
+
