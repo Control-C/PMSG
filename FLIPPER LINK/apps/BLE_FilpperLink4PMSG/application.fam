@@ -1,0 +1,8 @@
+App(
+    appid="pmsg_ble_beacon",
+    name="PMSG BLE Beacon",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="pmsg_ble_beacon_app",
+    cdefines=["APP_PMSG_BLE_BEACON"],
+    requires=["gui", "furi", "bt"],
+)
