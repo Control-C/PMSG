@@ -1,0 +1,28 @@
+# PMSG – FAQ
+
+**Is PMSG open source?**  
+PMSG is open-design concepts are shared, but branding and some designs are protected. This to support the PMSG project and fucture develpment 
+
+**Can I sell PMSG?**  
+Not without explicit permission. PMSG is intended for R&D, workshops, and demos. lets talk
+
+**Is voice control supported?**  
+No. til pmsgv5 Voice is energy-heavy and not ideal for public wearables. But selective right Xiao you can add Mic and via Grove add speakers
+
+**What phones and computers are supported?**  
+Any BLE-capable phone. iOS and Android supported via standard BLE tools or apps. and PC/mac on webbrowser google chrome
+
+**Is this for kids?**  
+Yes, in supervised workshop settings.
+
+**where can i buy a PMSG**
+At the official website http://pmsg.online or at or partners like https://without.live/
+
+**PMSG Stands for?**
+The letters can stand for many things.
+We often read S as Smart Glasses, while G can just as easily hint at GPT.
+P and M are flexible too: Poor, Prototype, Private — but also Pebble, as a nod to sharing and extending the codebase.
+At the same time, M stands for Modular, Mesh, and Maker-friendly — core ideas behind the project.
+And yes, there’s a personal layer as well: P and M are also the initials of the project’s instigator, Paul Stefaan Mooij.
+So PMSG is deliberately open-ended — a name that keeps you guessing, invites interpretation, and reflects how the project itself works.
+
