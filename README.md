@@ -57,7 +57,13 @@ Recommended:
 - Let Agent read `/ai/mcp/*.json` (if present)
 - Ask Agent to respect XIAO board pinouts
 
-[![GitHub Copilot](https://img.shields.io/badge/GitHub-Copilot-24292e?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/features/copilot](https://github.com/copilot/spaces/Control-C/1))
+
+
+<p align="center">
+   <a href="https://github.com/copilot/spaces/Control-C/1">
+   <img src="https://img.shields.io/badge/GitHub-Copilot-24292e?style=for-the-badge&logo=github&logoColor=white" alt="PMSG COPILOT SPART"/> </a>
+</p>
+
 
 [![Open in Cursor](https://img.shields.io/badge/Open_in-Cursor-ff6f00?style=for-the-badge&logo=cursor&logoColor=white)](https://cursor.sh)
 
