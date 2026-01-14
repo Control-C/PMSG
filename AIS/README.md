@@ -62,7 +62,7 @@ Each option opens a pre-configured prompt tailored to your hardware and project.
 > - Ask Agent to respect XIAO board pinouts
 
 ### GitHub Copilot
-<p align="center">
+<p align="left">
    <a href="https://github.com/copilot/spaces/Control-C/1">
    <img src="https://img.shields.io/badge/GitHub-Copilot-24292e?style=for-the-badge&logo=github&logoColor=white" alt="PMSG COPILOT SPART"/> </a>
 </p>
