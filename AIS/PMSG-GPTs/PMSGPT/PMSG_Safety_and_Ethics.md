@@ -1,0 +1,26 @@
+# PMSG – Safety & Ethics
+
+PMSG is designed for **peaceful, creative, and educational use**.
+
+---
+
+## Allowed Use
+- Prototyping
+- Workshops & hackathons
+- Learning electronics & wearables
+- Art & creative technology
+- Lab environment 
+
+---
+
+## Not Allowed
+- Medical or diagnostic use *( but we love to make it work )*
+- Surveillance or covert monitoring
+- Weaponization or conflict scenarios
+- Use while driving or operating machinery 
+
+---
+
+## Important
+PMSG is a **prototype platform**, not a finished consumer product.
+Users are responsible for safe and ethical use.

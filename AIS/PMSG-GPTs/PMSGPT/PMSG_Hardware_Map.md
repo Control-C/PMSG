@@ -1,0 +1,35 @@
+# PMSG – Hardware Map
+
+This document defines **known-good pin mappings**.
+If a board is not listed, manual mapping is required.
+
+---
+
+## Seeed XIAO ESP32S3 (example)
+- LED (WS2812): GPIO21
+- Buzzer / Vibration motor: GPIO10
+- Button: GPIO1
+- I²C SDA: GPIO6
+- I²C SCL: GPIO7
+- Power: 3.3V logic (5V only for LEDs if supported)
+
+---
+
+## Seeed XIAO nRF52840 Sense (example)
+- LED: GPIOxx (board specific)
+- Button: GPIOxx
+- I²C: Board default SDA / SCL
+- Sensors: Onboard (IMU, mic, etc.)
+
+---
+
+## Notes
+- Always confirm voltage levels before connecting LEDs or motors
+- Use level shifting when driving 5V LEDs from 3.3V logic
+- Secure vibration motors with glue + strain relief on wires
+
+## RF use right Xiao module or add on 
+- BlE
+- WIFI 
+- Lora 
+- Mobile GSM 
