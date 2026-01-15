@@ -5,3 +5,6 @@
 2.Open zipfile on you Mac/PC  
 
 3. Use python see this tool  https://github.com/flipperdevices/flipperzero-ufbt
+
+
+Great video how to https://www.youtube.com/watch?v=MrMvFuN4IHE
