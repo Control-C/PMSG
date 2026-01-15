@@ -1,4 +1,5 @@
-Download * files zip 
-Open zip 
+1.Download * files zip 
 
-Use python see this tool  https://github.com/flipperdevices/flipperzero-ufbt
+2.Open zipfile on you Mac/PC  
+
+3. Use python see this tool  https://github.com/flipperdevices/flipperzero-ufbt
