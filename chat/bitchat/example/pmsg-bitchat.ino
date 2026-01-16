@@ -1,186 +1,150 @@
-#include <BLEDevice.h>
-#include <BLEServer.h>
-#include <BLEUtils.h>
-#include <BLE2902.h>
-#include <FastLED.h>
-#include <Wire.h>
-#include <BH1750.h>
-#include <Adafruit_VEML6070.h>
+#include <NimBLEDevice.h>
 
-// ─────────────────────────────────────────────
-// Hardware definitions for XIAO ESP32C6
-// ─────────────────────────────────────────────
-#define NUM_LEDS          4
-#define LED_STRIP_PIN     1       // D1 = GPIO1 → WS2812 data
-#define VIB_PIN           18      // D10 = GPIO18 → vibration/buzzer PWM
-#define BUTTON_PIN        20      // D9 = GPIO20 → button (active LOW)
-#define ONBOARD_LED_PIN   15      // Yellow USER LED (active LOW)
+// Nordic UART Service (NUS) for prototyping
+#define SERVICE_UUID "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
+#define RX_UUID      "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"  // Write / WriteNR
+#define TX_UUID      "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"  // Notify
 
-// I²C pins (default on XIAO ESP32C6)
-#define SDA_PIN           22      // D4 = GPIO22 → SDA
-#define SCL_PIN           23      // D5 = GPIO23 → SCL
+// XIAO ESP32C6 pins
+#define LED_PIN    LED_BUILTIN   // GPIO15 - active LOW
+#define BUTTON_PIN 9             // D9 = GPIO20 - pull-up, press = LOW
 
-CRGB leds[NUM_LEDS];
+NimBLEServer*        pServer   = nullptr;
+NimBLECharacteristic* pRxChar   = nullptr;
+NimBLECharacteristic* pTxChar   = nullptr;
 
-BH1750 lightMeter;                  // Lux sensor
-Adafruit_VEML6070 uv = Adafruit_VEML6070();  // UV sensor
+NimBLEScan*          pScan     = nullptr;
+bool                 doScan    = true;
+std::string          forwardBuffer;
 
-// BLE UUIDs (PMSG style)
-#define SERVICE_UUID        "504d5347-0000-1000-8000-00805f9b34fb"
-#define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+// Blink helper
+void blinkLED(int times = 1, int ms = 80) {
+  for (int i = 0; i < times; i++) {
+    digitalWrite(LED_PIN, LOW);
+    delay(ms);
+    digitalWrite(LED_PIN, HIGH);
+    delay(ms);
+  }
+}
 
-BLECharacteristic *pCharacteristic;
-
-bool oldButtonState = HIGH;
-
-// Callback when client writes to the characteristic
-class MyCallbacks : public BLECharacteristicCallbacks {
-  void onWrite(BLECharacteristic *pCharacteristic) {
+// Updated callback class (new signature + connInfo)
+class RxCallbacks : public NimBLECharacteristicCallbacks {
+  void onWrite(NimBLECharacteristic* pCharacteristic, NimBLEConnInfo& connInfo) override {
     std::string rxValue = pCharacteristic->getValue();
-    if (rxValue.length() > 0) {
-      String cmd = String(rxValue.c_str());
-      cmd.trim();
+    if (rxValue.empty()) return;
 
-      Serial.print("Received: "); Serial.println(cmd);
+    Serial.printf("RX (%d bytes) from %s: ", rxValue.size(), connInfo.getAddress().toString().c_str());
+    for (uint8_t b : rxValue) Serial.printf("%02X ", b);
+    Serial.println();
 
-      if (cmd == "/buzz") {
-        analogWrite(VIB_PIN, 255);
-        delay(400);
-        analogWrite(VIB_PIN, 0);
-        pCharacteristic->setValue("Buzz OK");
-        pCharacteristic->notify();
-      }
-      else if (cmd == "/Flash") {
-        for (int times = 0; times < 4; times++) {
-          fill_solid(leds, NUM_LEDS, CRGB::White);
-          FastLED.show();
-          delay(120);
-          FastLED.clear();
-          FastLED.show();
-          delay(120);
-        }
-        pCharacteristic->setValue("Flash OK");
-        pCharacteristic->notify();
-      }
-      else if (cmd == "/green") {
-        fill_solid(leds, NUM_LEDS, CRGB::Green);
-        FastLED.show();
-        pCharacteristic->setValue("Green OK");
-        pCharacteristic->notify();
-      }
-      else if (cmd == "/red") {
-        fill_solid(leds, NUM_LEDS, CRGB::Red);
-        FastLED.show();
-        pCharacteristic->setValue("Red OK");
-        pCharacteristic->notify();
-      }
-      else if (cmd == "/lux") {
-        float lux = lightMeter.readLightLevel();
-        if (lux < 0) lux = 0;  // BH1750 returns -1 on error sometimes
-        String reply = "Lux: " + String(lux, 1);
-        pCharacteristic->setValue(reply.c_str());
-        pCharacteristic->notify();
-        Serial.println(reply);
-      }
-      else if (cmd == "/uv") {
-        uint16_t uvRaw = uv.readUV();
-        float uvIndex = uvRaw / 100.0;  // VEML6070 returns raw, divide by 100 for index approx
-        String reply = "UV Index: " + String(uvIndex, 1);
-        pCharacteristic->setValue(reply.c_str());
-        pCharacteristic->notify();
-        Serial.println(reply);
-      }
-      else {
-        pCharacteristic->setValue("Unknown cmd");
-        pCharacteristic->notify();
-      }
+    forwardBuffer = rxValue;   // Store for relay/forward
+
+    blinkLED(2);
+
+    // Echo back to the sender (for testing)
+    pTxChar->setValue(rxValue);
+    pTxChar->notify(true);     // true = notify all connected clients
+  }
+};
+
+// New scan callback class (replaces old AdvertisedDeviceCallbacks)
+class ScanCallbacks : public NimBLEScanCallbacks {
+  void onResult(const NimBLEAdvertisedDevice* advertisedDevice) override {
+    if (advertisedDevice->isAdvertisingService(NimBLEUUID(SERVICE_UUID))) {
+      Serial.print("Found NUS peer: ");
+      Serial.print(advertisedDevice->toString().c_str());
+      Serial.printf(" RSSI: %d\n", advertisedDevice->getRSSI());
+
+      // Optional: connect if not already connected (add logic to avoid flooding)
+      // For simple test/demo: just log
+      blinkLED(1, 50);
     }
+  }
+
+  void onScanEnd(const NimBLEScanResults& scanResults, int reason) override {
+    Serial.printf("Scan ended, reason: %d\n", reason);
+    doScan = true;  // Trigger restart in loop
   }
 };
 
 void setup() {
   Serial.begin(115200);
-  delay(200);
-  Serial.println("PMSG BitChat – XIAO ESP32C6 (BLE + LEDs + Vib + Button + BH1750 + VEML6070)");
+  delay(400);
+  Serial.println("\n=== NUS Dual-Role Relay Prototype (NimBLE 2.x+) ===");
 
-  // ─── Pins ─────────────────────────────────────
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, HIGH);  // LED off
+
   pinMode(BUTTON_PIN, INPUT_PULLUP);
-  pinMode(ONBOARD_LED_PIN, OUTPUT);
-  digitalWrite(ONBOARD_LED_PIN, HIGH);   // Off (active LOW)
 
-  pinMode(VIB_PIN, OUTPUT);
-  analogWrite(VIB_PIN, 0);               // Off
+  NimBLEDevice::init("Relay-XIAO");
+  NimBLEDevice::setPower(9);   // Max TX power (ESP32-C6 supports it)
 
-  // FastLED
-  FastLED.addLeds<WS2812, LED_STRIP_PIN, GRB>(leds, NUM_LEDS);
-  FastLED.setBrightness(60);
-  FastLED.clear();
-  FastLED.show();
+  // ── Peripheral / Server ───────────────────────────────
+  pServer = NimBLEDevice::createServer();
 
-  // ─── I²C Sensors ──────────────────────────────
-  Wire.begin(SDA_PIN, SCL_PIN);          // Explicit pins for safety
+  NimBLEService* pService = pServer->createService(SERVICE_UUID);
 
-  // BH1750 (lux)
-  if (lightMeter.begin(BH1750::CONTINUOUS_HIGH_RES_MODE)) {
-    Serial.println("BH1750 initialized OK");
-  } else {
-    Serial.println("BH1750 ERROR - check wiring / I2C");
-  }
-
-  // VEML6070 (UV)
-  if (uv.begin()) {
-    uv.setIntegrationTime(VEML6070_1_T);   // 1T = ~40ms integration, good balance
-    Serial.println("VEML6070 initialized OK");
-  } else {
-    Serial.println("VEML6070 ERROR - check wiring / I2C");
-  }
-
-  // ─── BLE setup ────────────────────────────────
-  BLEDevice::init("PMSG BitChat Glasses");
-  BLEServer *pServer = BLEDevice::createServer();
-
-  BLEService *pService = pServer->createService(SERVICE_UUID);
-
-  pCharacteristic = pService->createCharacteristic(
-    CHARACTERISTIC_UUID,
-    BLECharacteristic::PROPERTY_READ |
-    BLECharacteristic::PROPERTY_WRITE |
-    BLECharacteristic::PROPERTY_NOTIFY
+  pRxChar = pService->createCharacteristic(
+    RX_UUID,
+    NIMBLE_PROPERTY::WRITE | NIMBLE_PROPERTY::WRITE_NR
   );
+  pRxChar->setCallbacks(new RxCallbacks());
 
-  pCharacteristic->addDescriptor(new BLE2902());
-  pCharacteristic->setCallbacks(new MyCallbacks());
-  pCharacteristic->setValue("PMSG ready w/ sensors");
+  pTxChar = pService->createCharacteristic(
+    TX_UUID,
+    NIMBLE_PROPERTY::NOTIFY | NIMBLE_PROPERTY::READ
+  );
 
   pService->start();
 
-  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+  // Advertising
+  NimBLEAdvertising* pAdvertising = NimBLEDevice::getAdvertising();
   pAdvertising->addServiceUUID(SERVICE_UUID);
-  pAdvertising->setScanResponse(true);
-  BLEDevice::startAdvertising();
+  pAdvertising->setAppearance(0x00);           // Optional
+  pAdvertising->enableScanResponse(true);      // ← Fixed: was setScanResponse
+  pAdvertising->start();
+  Serial.println("Peripheral advertising started");
 
-  Serial.println("BLE advertising... Use nRF Connect → write /lux or /uv");
+  // ── Central / Scanning ────────────────────────────────
+  pScan = NimBLEDevice::getScan();
+  pScan->setScanCallbacks(new ScanCallbacks(), true);  // ← Fixed: setScanCallbacks + wantDuplicates
+  pScan->setActiveScan(true);
+  pScan->setInterval(97);
+  pScan->setWindow(97);
 }
 
 void loop() {
-  // Button press → short buzz + onboard LED flash
-  bool buttonState = digitalRead(BUTTON_PIN);
-  if (buttonState == LOW && oldButtonState == HIGH) {
-    Serial.println("Button → buzz + LED flash");
-    analogWrite(VIB_PIN, 180);
-    digitalWrite(ONBOARD_LED_PIN, LOW);   // On
-    delay(150);
-    analogWrite(VIB_PIN, 0);
-    digitalWrite(ONBOARD_LED_PIN, HIGH);  // Off
-
-    // Notify if someone is connected
-    if (pCharacteristic->getSubscribedCount() > 0) {
-      pCharacteristic->setValue("Button pressed");
-      pCharacteristic->notify();
+  // Button: toggle advertising (example)
+  if (digitalRead(BUTTON_PIN) == LOW) {
+    delay(50);  // debounce
+    if (digitalRead(BUTTON_PIN) == LOW) {
+      if (NimBLEDevice::getAdvertising()->isAdvertising()) {
+        NimBLEDevice::stopAdvertising();
+        Serial.println("Advertising stopped");
+        blinkLED(4, 60);
+      } else {
+        NimBLEDevice::startAdvertising();
+        Serial.println("Advertising restarted");
+        blinkLED(1, 200);
+      }
+      while (digitalRead(BUTTON_PIN) == LOW) delay(10);
     }
-    delay(60);  // debounce
   }
-  oldButtonState = buttonState;
 
-  delay(30);
+  // Restart scan when previous ends
+  if (doScan && pScan && !pScan->isScanning()) {
+    doScan = false;
+    pScan->start(5, false);   // Scan 5 sec, non-blocking
+    Serial.println("Started scan for NUS peers...");
+  }
+
+  // Simple forward (expand this for real multi-peer relay)
+  if (!forwardBuffer.empty()) {
+    // In full relay: send to other connected clients or discovered peers
+    // For now: already echoed in onWrite
+    forwardBuffer.clear();
+  }
+
+  delay(200);
 }
