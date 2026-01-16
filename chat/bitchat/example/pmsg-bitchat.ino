@@ -1,13 +1,23 @@
+// PMSG v4 esp32C6 Bitchat Relay Prototype met FastLED WS2812
 #include <NimBLEDevice.h>
+#include <FastLED.h>
 
-// Nordic UART Service (NUS) for prototyping
-#define SERVICE_UUID "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
-#define RX_UUID      "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"  // Write / WriteNR
-#define TX_UUID      "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"  // Notify
+// WS2812 LEDs op D1 = GPIO1
+#define LED_PIN_D1     1
+#define NUM_WS2812     4
+CRGB ws_leds[NUM_WS2812];
 
-// XIAO ESP32C6 pins
-#define LED_PIN    LED_BUILTIN   // GPIO15 - active LOW
-#define BUTTON_PIN 9             // D9 = GPIO20 - pull-up, press = LOW
+// Buzzer op D10 = GPIO18 (XIAO ESP32C6 pinout)
+#define BUZZER_PIN     18         //  GPIO voor D10
+
+// Bitchat custom UUIDs (werkt voor discovery)
+#define SERVICE_UUID   "f47b5e2d-4a9e-4c5a-9b3f-8e1d2c3a4b5c"
+#define RX_UUID        "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"  // Write
+#define TX_UUID        "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"  // Notify
+
+// Built-in LED & button
+#define LED_PIN    LED_BUILTIN   // GPIO15 active LOW
+#define BUTTON_PIN 9             // D9 = GPIO20
 
 NimBLEServer*        pServer   = nullptr;
 NimBLECharacteristic* pRxChar   = nullptr;
@@ -27,60 +37,97 @@ void blinkLED(int times = 1, int ms = 80) {
   }
 }
 
-// Updated callback class (new signature + connInfo)
+// RxCallbacks: kleuren cyclisch per bericht + buzzer piep + test 'r'/'b'
 class RxCallbacks : public NimBLECharacteristicCallbacks {
   void onWrite(NimBLECharacteristic* pCharacteristic, NimBLEConnInfo& connInfo) override {
     std::string rxValue = pCharacteristic->getValue();
     if (rxValue.empty()) return;
 
-    Serial.printf("RX (%d bytes) from %s: ", rxValue.size(), connInfo.getAddress().toString().c_str());
+    Serial.printf("RX Bitchat bericht (%d bytes) from %s: ", rxValue.size(), connInfo.getAddress().toString().c_str());
     for (uint8_t b : rxValue) Serial.printf("%02X ", b);
     Serial.println();
 
-    forwardBuffer = rxValue;   // Store for relay/forward
+    Serial.println("→ Bericht ontvangen! LEDs veranderen kleur + buzzer piept");
 
-    blinkLED(2);
+    // Cyclisch kleur per bericht
+    static uint8_t colorIndex = 0;
+    CRGB colors[] = {CRGB::Red, CRGB::Blue, CRGB::Green, CRGB::Yellow, CRGB::Purple, CRGB::Orange};
+    fill_solid(ws_leds, NUM_WS2812, colors[colorIndex % 6]);
+    FastLED.show();
+    colorIndex++;
 
-    // Echo back to the sender (for testing)
+    // Buzzer: korte piep (HIGH = aan voor active buzzer)
+    digitalWrite(BUZZER_PIN, HIGH);
+    delay(100);
+    digitalWrite(BUZZER_PIN, LOW);
+
+    // Test fallback: als plaintext 'r' of 'b' (voor nRF Connect test)
+    bool hasR = false, hasB = false;
+    for (uint8_t b : rxValue) {
+      if (b == 'r' || b == 'R') hasR = true;
+      if (b == 'b' || b == 'B') hasB = true;
+    }
+    if (hasR) {
+      fill_solid(ws_leds, NUM_WS2812, CRGB::Red);
+      FastLED.show();
+      Serial.println("Test 'R' gedetecteerd → force ROOD");
+    }
+    if (hasB) {
+      fill_solid(ws_leds, NUM_WS2812, CRGB::Blue);
+      FastLED.show();
+      Serial.println("Test 'B' gedetecteerd → force BLAUW");
+    }
+
+    forwardBuffer = rxValue;
+
     pTxChar->setValue(rxValue);
-    pTxChar->notify(true);     // true = notify all connected clients
+    pTxChar->notify(true);
+
+    blinkLED(2, 150);
   }
 };
 
-// New scan callback class (replaces old AdvertisedDeviceCallbacks)
+// ScanCallbacks
 class ScanCallbacks : public NimBLEScanCallbacks {
   void onResult(const NimBLEAdvertisedDevice* advertisedDevice) override {
     if (advertisedDevice->isAdvertisingService(NimBLEUUID(SERVICE_UUID))) {
-      Serial.print("Found NUS peer: ");
+      Serial.print("Found Bitchat peer: ");
       Serial.print(advertisedDevice->toString().c_str());
       Serial.printf(" RSSI: %d\n", advertisedDevice->getRSSI());
-
-      // Optional: connect if not already connected (add logic to avoid flooding)
-      // For simple test/demo: just log
       blinkLED(1, 50);
     }
   }
 
   void onScanEnd(const NimBLEScanResults& scanResults, int reason) override {
     Serial.printf("Scan ended, reason: %d\n", reason);
-    doScan = true;  // Trigger restart in loop
+    doScan = true;
   }
 };
 
 void setup() {
   Serial.begin(115200);
   delay(400);
-  Serial.println("\n=== NUS Dual-Role Relay Prototype (NimBLE 2.x+) ===");
+  Serial.println("\n=== Bitchat Relay met FastLED + Buzzer op D10 ===");
 
   pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH);  // LED off
+  digitalWrite(LED_PIN, HIGH);  // off
 
   pinMode(BUTTON_PIN, INPUT_PULLUP);
 
-  NimBLEDevice::init("Relay-XIAO");
-  NimBLEDevice::setPower(9);   // Max TX power (ESP32-C6 supports it)
+  // Buzzer init
+  pinMode(BUZZER_PIN, OUTPUT);
+  digitalWrite(BUZZER_PIN, LOW);  // Uit
 
-  // ── Peripheral / Server ───────────────────────────────
+  // FastLED
+  FastLED.addLeds<WS2812B, LED_PIN_D1, GRB>(ws_leds, NUM_WS2812);
+  FastLED.setBrightness(80);
+  fill_solid(ws_leds, NUM_WS2812, CRGB::Black);
+  FastLED.show();
+  Serial.println("FastLED + Buzzer init OK");
+
+  NimBLEDevice::init("Bitchat-XIAO-Relay");
+  NimBLEDevice::setPower(9);
+
   pServer = NimBLEDevice::createServer();
 
   NimBLEService* pService = pServer->createService(SERVICE_UUID);
@@ -98,51 +145,45 @@ void setup() {
 
   pService->start();
 
-  // Advertising
   NimBLEAdvertising* pAdvertising = NimBLEDevice::getAdvertising();
   pAdvertising->addServiceUUID(SERVICE_UUID);
-  pAdvertising->setAppearance(0x00);           // Optional
-  pAdvertising->enableScanResponse(true);      // ← Fixed: was setScanResponse
+  pAdvertising->setAppearance(0x00);
+  pAdvertising->enableScanResponse(true);
   pAdvertising->start();
-  Serial.println("Peripheral advertising started");
+  Serial.println("Advertising gestart...");
 
-  // ── Central / Scanning ────────────────────────────────
   pScan = NimBLEDevice::getScan();
-  pScan->setScanCallbacks(new ScanCallbacks(), true);  // ← Fixed: setScanCallbacks + wantDuplicates
+  pScan->setScanCallbacks(new ScanCallbacks(), true);
   pScan->setActiveScan(true);
   pScan->setInterval(97);
   pScan->setWindow(97);
 }
 
 void loop() {
-  // Button: toggle advertising (example)
   if (digitalRead(BUTTON_PIN) == LOW) {
-    delay(50);  // debounce
+    delay(50);
     if (digitalRead(BUTTON_PIN) == LOW) {
-      if (NimBLEDevice::getAdvertising()->isAdvertising()) {
-        NimBLEDevice::stopAdvertising();
-        Serial.println("Advertising stopped");
+      auto* adv = NimBLEDevice::getAdvertising();
+      if (adv->isAdvertising()) {
+        adv->stop();
+        Serial.println("Advertising gestopt");
         blinkLED(4, 60);
       } else {
-        NimBLEDevice::startAdvertising();
-        Serial.println("Advertising restarted");
+        adv->start();
+        Serial.println("Advertising herstart");
         blinkLED(1, 200);
       }
       while (digitalRead(BUTTON_PIN) == LOW) delay(10);
     }
   }
 
-  // Restart scan when previous ends
   if (doScan && pScan && !pScan->isScanning()) {
     doScan = false;
-    pScan->start(5, false);   // Scan 5 sec, non-blocking
-    Serial.println("Started scan for NUS peers...");
+    pScan->start(5, false);
+    Serial.println("Scan voor Bitchat peers gestart...");
   }
 
-  // Simple forward (expand this for real multi-peer relay)
   if (!forwardBuffer.empty()) {
-    // In full relay: send to other connected clients or discovered peers
-    // For now: already echoed in onWrite
     forwardBuffer.clear();
   }
 
