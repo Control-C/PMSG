@@ -1,4 +1,5 @@
 // PMSG v4 esp32C6 Bitchat Relay Prototype met FastLED WS2812
+// working code only string will not be shown in chat... working on this 
 #include <NimBLEDevice.h>
 #include <FastLED.h>
 
