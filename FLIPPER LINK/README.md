@@ -1,4 +1,5 @@
 # PMSG FLIPPER LINK 🐬👓 — Flipper Zero controller for PMSG (BLE * UART USBC)
+![PMSG Cool Glasses with Flipper Link](https://github.com/Control-C/PMSG/raw/main/img/PMSG%20FLIPPER%20LINK.png)
 
 This repo contains Flipper Zero external apps to control **PMSG smart glasses**.
 
