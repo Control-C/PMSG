@@ -1,4 +1,5 @@
 # PMSG-XIAO – Bitchat BLE Mesh Test Node
+![PMSG Cool Glasses](/img/bitchat_PMSG_demo2026.jpg)
 
 **Seeed XIAO ESP32C6** + PMSG4PixelDisplay  + Buzzer  
 Simple BLE peripheral that tries to play nice with the **Bitchat app**[](https://bitchat.free)
