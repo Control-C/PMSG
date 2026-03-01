@@ -1,4 +1,4 @@
-# PMSG + OpenClaw Integration Bible (P.O.C. — PMSG Open Claw)
+# PMSG + OpenClaw 🦞 (P.O.C. — PMSG Open Claw 🦞 )
 
 **Version**: 2026-03  
 **Status**: Living document – update when hardware/firmware changes  
