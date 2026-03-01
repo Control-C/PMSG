@@ -3,7 +3,7 @@
 **Version**: 2026-03  
 **Status**: Living document – update when hardware/firmware changes  
 **Storage locations (keep these synced)**:
-- GitHub: https://github.com/Control-C/PMSG/blob/main/AIS/assistants/PMSG-OPENCLAW-BIBLE.md
+- GitHub: [https://github.com/Control-C/PMSG/blob/main/AIS/assistants/PMSG-OPENCLAW-BIBLE.md](https://github.com/Control-C/PMSG/blob/main/AIS/PMSG-GPTs/POC/POC-Pmsg-OpenClaw.md)
 - Local machine: ~/Documents/PMSG/PMSG-OPENCLAW-BIBLE.md (markdown + plain text backup)
 - Obsidian vault / Logseq / Anytype (if you use PKM) – for searchable linking
 - Printed cheat-sheet version (optional – 2-page summary)
