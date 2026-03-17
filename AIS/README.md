@@ -10,6 +10,8 @@ It is designed to work with:
 - Cursor IDE
 - GitHub Copilot
 - Google Gemini
+- OpenCLAW 
+- NemoClaw
 
 AI tools can use the files in this folder as **structured context** to provide accurate, hardware-aware guidance.
 
