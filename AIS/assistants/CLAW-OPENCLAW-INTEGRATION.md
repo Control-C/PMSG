@@ -7,7 +7,7 @@ Repo: https://github.com/Control-C/PMSG
 Goal: Set up PMSG hardware to feed data (camera, sensors, mic, IMU) to AI assistants like OpenClaw[](https://openclaw.ai), Claude, Gemini, local LLMs, etc. via BLE, WiFi, or USB-C.
 
 # ESP-CLAW 
-Or is ESP is used go for https://esp-claw.com/en/ 
+Or if a ESP is used go for https://esp-claw.com/en/ 
 
 ## Hardware Assumptions (PMSG variants)
 - Seeed XIAO nRF52840 — BLE focus
