@@ -1,0 +1,49 @@
+devices:
+  - name: smart_glass_display
+    type: led_strip
+    config:
+      length: 4 # For the 4 WS2812C-2020-V1 LEDs
+    peripherals:
+      - name: gpio_neopixel
+
+  - name: haptic_alert
+    type: relay
+    peripherals:
+      - name: vibration_motor_pin
+
+  - name: ir_blaster
+    type: ir_transmitter
+    peripherals:
+      - name: ir_led_pin
+
+  - name: touch_frame
+    type: touch_button
+    peripherals:
+      - name: touch_sensor_pin
+
+  - name: main_button
+    type: button
+    peripherals:
+      - name: push_button_pin
+
+  - name: power_status
+    type: battery_level
+    config:
+      v_full: 4200
+      v_empty: 3300
+      divider_ratio: 2.0 # 220K/220K voltage divider
+    peripherals:
+      - name: battery_adc
+
+  - name: environmental_sensors
+    type: i2c_bus
+    config:
+      scan: true # Scans for SHT31, LTR390, VEML7700, and SSD1306
+      supported_devices:
+        - "sht3x"
+        - "ltr390"
+        - "veml7700"
+        - "ssd1306"
+        - "lis3dh"
+    peripherals:
+      - name: i2c_bus_0
