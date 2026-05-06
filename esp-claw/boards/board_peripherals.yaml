@@ -1,0 +1,12 @@
+peripherals:
+  - name: gpio_neopixel
+    type: gpio
+    config:
+      pin: 43 # Standard XIAO S3 User LED/NeoPixel pin (Verify against your PMSG wiring)
+  
+  - name: i2c_bus_0
+    type: i2c
+    config:
+      sda_pin: 5  # XIAO D4 / GPIO5
+      scl_pin: 6  # XIAO D5 / GPIO6
+      port: 0
