@@ -1,3 +1,3 @@
-board: pmsg_xiao_s3
-chip: esp32s3
-description: "PMSG (Protype Men's Smart Glasses) based on Seeed XIAO ESP32-S3"
+board: pmsg_xiao_XX
+chip: esp32XX
+description: "PMSG (Protype Men's Smart Glasses) based on Seeed XIAO ESP32-XX"
