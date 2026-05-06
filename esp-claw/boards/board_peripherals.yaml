@@ -1,12 +1,45 @@
 peripherals:
+  # Visual Feedback (4 NeoPixels)
   - name: gpio_neopixel
     type: gpio
     config:
-      pin: 43 # Standard XIAO S3 User LED/NeoPixel pin (Verify against your PMSG wiring)
-  
+      pin: 1 # Mapped to GP1 on schematic
+
+  # Haptics
+  - name: vibration_motor_pin
+    type: gpio
+    config:
+      pin: 10 # Physical D10
+
+  # Infrared Control
+  - name: ir_led_pin
+    type: gpio
+    config:
+      pin: 8 # Physical D8
+
+  # Inputs
+  - name: touch_sensor_pin
+    type: touch_pad
+    config:
+      pin: 3 # Physical D3 / touch#D3
+
+  - name: push_button_pin
+    type: gpio
+    config:
+      pin: 9 # Physical D9 / pushbutton#D9
+      mode: input
+      pull_up: true
+
+  # Battery Monitoring
+  - name: battery_adc
+    type: adc
+    config:
+      pin: 0 # Physical A0
+
+  # I2C Bus for Sensors & OLED
   - name: i2c_bus_0
     type: i2c
     config:
-      sda_pin: 5  # XIAO D4 / GPIO5
-      scl_pin: 6  # XIAO D5 / GPIO6
+      sda_pin: 5 # Physical D4
+      scl_pin: 6 # Physical D5
       port: 0
