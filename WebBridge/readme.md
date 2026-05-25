@@ -8,6 +8,7 @@ It enables direct interaction between:
 - PMSG devices via ( USB - BLE - API / Softmodem audio ) 
 - AR scenes ([A-Frame](https://aframe.io/) / WebXR )
 - AI models ( [TensorFlow.js](https://www.tensorflow.org/js))
+- Reachy Mini Control USB version (* tested ) 
 
 No native apps.  
 No heavy middleware.  
