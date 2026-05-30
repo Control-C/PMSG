@@ -81,7 +81,7 @@ Tilt your head to control your robot, drone, RC car, or game!
 
 | PMSG Gamepad                  | Example Use Case              |
 |-------------------------------|-------------------------------|
-| ![PMSG](photo1.jpg)           | ![Reachy / Drone](photo2.jpg) |
+| ![PMSG](psmgampad.png)           | ![Reachy / Drone](photo2.jpg) |
 
 *(Replace with your actual photos)*
 
