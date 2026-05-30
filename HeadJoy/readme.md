@@ -99,8 +99,5 @@ We welcome contributions! Especially in:
 
 ## 📄 License
 
-MIT License
 
 ---
-
-**Made with ❤️ by the PMSG Community**
