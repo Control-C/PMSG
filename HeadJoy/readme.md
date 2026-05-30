@@ -2,7 +2,7 @@
 
 **PMSG (P.M. Smart Glasses)** is a DIY wearable head-tracking controller that lets you control robots, drones, RC cars, and games using only your head movements.
 
-![PMSG Gamepad](https://via.placeholder.com/800x400?text=PMSG+Gamepad+Photo)
+
 ![Use Cases](reachy_pmsg.png)
 
 ---
