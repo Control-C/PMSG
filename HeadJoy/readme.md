@@ -24,9 +24,17 @@
 |--------------|------------------|-------|
 | **Windows**  | ✅ Working      | Best experience |
 | **Linux**    | ✅ Working      | Works great |
+| **Android & Auto**    | ❌ Not working yet      | WIP |
 | **macOS**    | ❌ Not working yet | BLE gamepad support is bad hope to buy licents |
+| **IOS & CarPlay**    | ❌ Not working yet |  |
 
 > **Note:** We are actively working on better macOS support.
+
+| Platform     | source             | Bootloader        |
+|--------------|------------------|---------------------|
+| ESP32C6      |   [code / source](https://github.com/Control-C/PMSG/tree/main/HeadJoy/xiao/esp32C6)     | [web bootloader](https://pmsg.2qr.at/pmsg-installer/pmsgamepad/) |
+
+
 
 ---
 
