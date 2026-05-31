@@ -53,9 +53,7 @@ Car Project: PMSG Fall-Asleep Detection System
 PMSG Automotive Drowsiness Detection Flow 
 ![Use Cases car](carflow.png)
 
-** [Articel](https://www.linkedin.com/feed/update/urn:li:activity:7379229335376900096)  **
 
-![Use Cases car](carpmsg.png)
 
 
 ---
@@ -106,6 +104,7 @@ Tilt your head to control your robot, drone, RC car, or game!
 | PMSG Gamepad                  | Example Use Case              |
 |-------------------------------|-------------------------------|
 | ![PMSG](psmgampad.png)           | ![Reachy / gamepad](Reachy_gamepad.png) |
+| ![PMSG Car](carpmsg.png)           | [Articel](https://www.linkedin.com/feed/update/urn:li:activity:7379229335376900096) |
 
 
 
