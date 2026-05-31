@@ -67,11 +67,17 @@ PMSG Automotive Drowsiness Detection Flow
 ## 🚀 Getting Started
 
 ### 1. Flash the Firmware
-Upload the firmware using Arduino IDE (code available in this repo).
+Upload the firmware using Arduino IDE (code available in this repo) or web bootloader 
+https://pmsg.2qr.at/pmsg-installer/pmsgamepad/
+
+** you will get all 4pixeldisplay blink blue and at boot vibrtion motor will buzz... ** 
 
 ### 2. Pair the Device
 1. Power on your PMSG GAMEPAD
-2. Connect to **"PMSG GAMEPAD"** via Bluetooth
+2. Connect to **"PMSG GAMEPAD"** via Bluetooth 
+Now the blue leds will stop flashing 
+
+Also via serial you can check of the movemnt sensor is working or use web bootloader ( log function to debug ) 
 
 ### 3. Use It
 Tilt your head to control your robot, drone, RC car, or game!
