@@ -53,7 +53,10 @@ Car Project: PMSG Fall-Asleep Detection System
 PMSG Automotive Drowsiness Detection Flow 
 ![Use Cases car](carflow.png)
 
- [Articel]([https://www.linkedin.com/feed/update/urn:li:activity:7379229335376900096])  
+** [Articel](https://www.linkedin.com/feed/update/urn:li:activity:7379229335376900096)  **
+
+![Use Cases car](carpmsg.png)
+
 
 ---
 
