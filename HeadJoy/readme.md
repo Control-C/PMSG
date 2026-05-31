@@ -104,7 +104,7 @@ Tilt your head to control your robot, drone, RC car, or game!
 | PMSG Gamepad                  | Example Use Case              |
 |-------------------------------|-------------------------------|
 | ![PMSG](psmgampad.png)           | ![Reachy / gamepad](Reachy_gamepad.png) |
-| ![PMSG Car](carpmsg.png)           | [Introducing PMSG - Prototype Modular Smart Glasses : Revolutionising Discreet Wearable Tech for Everyday Focus and automotive](https://www.linkedin.com/feed/update/urn:li:activity:7379229335376900096) ![PMSG Car]([carpmsg.png](https://media.licdn.com/dms/image/v2/D4E12AQF8L4hiDS6Ddg/article-cover_image-shrink_720_1280/B4EZmhIDcBKYAI-/0/1759344874051?e=1781740800&v=beta&t=ocARsVhJEKu4VHRuxB6pQecdbCbWzfY9h2nfMe_I_gU))  |
+| ![PMSG Car](carpmsg.png)           | [Introducing PMSG - Prototype Modular Smart Glasses : Revolutionising Discreet Wearable Tech for Everyday Focus and automotive](https://www.linkedin.com/feed/update/urn:li:activity:7379229335376900096) ![PMSG Car](https://media.licdn.com/dms/image/v2/D4E12AQF8L4hiDS6Ddg/article-cover_image-shrink_720_1280/B4EZmhIDcBKYAI-/0/1759344874051?e=1781740800&v=beta&t=ocARsVhJEKu4VHRuxB6pQecdbCbWzfY9h2nfMe_I_gU) |
 
 
 
