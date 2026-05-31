@@ -29,7 +29,7 @@
 | **macOS**    | ❌ Not working yet | BLE gamepad support is bad hope to buy licents |
 | **IOS & CarPlay**    | ❌ Not working yet |  |
 
-> **Note:** We are actively working on better macOS support.
+> **Note:** We are actively working on better macOS support and Car OS 
 
 | Platform     | source             | Bootloader        |
 |--------------|------------------|---------------------|
