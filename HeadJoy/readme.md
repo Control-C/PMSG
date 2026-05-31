@@ -47,13 +47,13 @@
 | **Drones**            | Head tilt = Drone movement                | Planned |
 | **RC Cars**           | Head movement = Steering + Throttle       | Planned |
 | **Gaming - TV **       | Head tracking for immersive control       | Planned |
-| **Safety / Care**     | Detect when someone is falling asleep     | ✅ Working |
+| **Safety / Care**     | Detect when someone is falling asleep + Elderly alarm fall   | ✅ Working |
 
-Partern project: PMSG Fall-Asleep Detection System
+Car Project: PMSG Fall-Asleep Detection System
 PMSG Automotive Drowsiness Detection Flow 
 ![Use Cases car](carflow.png)
 
-
+ [Articel]([https://github.com/Control-C/PMSG/tree/main/HeadJoy/xiao/esp32C6](https://www.linkedin.com/feed/update/urn:li:activity:7379229335376900096))  
 
 ---
 
