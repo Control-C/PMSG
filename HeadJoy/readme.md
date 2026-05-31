@@ -1,6 +1,6 @@
 # 🎮 PMSG - GAMEPAD — Wearable Head Tracking Controller / Neck monitor
 
-**PMSG (P.M. Smart Glasses)** is a DIY wearable head-tracking controller that lets you control robots, drones, RC cars, and games using only your head movements.
+**PMSG (P.M. Smartglasses GamePad)** is a DIY wearable head-tracking controller that lets you control robots, drones, RC cars, and games using only your head movements.
 
 
 ![Use Cases](reachy_pmsg.png)
