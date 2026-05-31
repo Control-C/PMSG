@@ -24,7 +24,8 @@
 |--------------|------------------|-------|
 | **Windows**  | ✅ Working      | Best experience |
 | **Linux**    | ✅ Working      | Works great |
-| **Android & Auto**    | ❌ Not working yet      | WIP |
+| **Android Automotivex & PCM 6.0**    | ✅ Wip      | R&D |
+| **Android & Auto**    | ❌ Not working yet      | WIP OpenSource |
 | **macOS**    | ❌ Not working yet | BLE gamepad support is bad hope to buy licents |
 | **IOS & CarPlay**    | ❌ Not working yet |  |
 
