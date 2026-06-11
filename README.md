@@ -102,7 +102,7 @@ For more details on these upcoming features and to stay updated, visit our  [PMS
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-Opensource version:
+Open Design version:
 
 Introducing the **PMSG**—because who needs designer wearables when you’ve got DIY smarts and a pair of old goggles? 🤓
 
