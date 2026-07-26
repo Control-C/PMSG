@@ -13,6 +13,9 @@ It is designed to work with:
 - OpenCLAW 
 - NemoClaw
 
+  Soon
+- Loes.ai 
+
 AI tools can use the files in this folder as **structured context** to provide accurate, hardware-aware guidance.
 
 📁 **AIS Folder:** [https://github.com/Control-C/PMSG/tree/main/AIS](https://github.com/Control-C/PMSG/tree/main/AIS)
