@@ -14,7 +14,8 @@ It is designed to work with:
 - NemoClaw
 
   Soon
-- Loes.ai 
+- https://Loes.ai 
+- https://www.schematik.io
 
 AI tools can use the files in this folder as **structured context** to provide accurate, hardware-aware guidance.
 
