@@ -49,6 +49,7 @@ All sensors share SDA/SCL on the 3V3 bus.
 
 | Function | Pin |
 |----------|-----|
+| **4 pixel ws2812b RGB led** | `D1` PIN 1 = output|
 | **Vibration Motor (PWM)** | `D10` PIN 10 = output|
 | **Push Button** | `D9` Pin9 = input |
 | **I²C (Grove & Sensors)** | `SDA`, `SCL` |
@@ -82,6 +83,7 @@ TODO WIP
 
 This guide explains how to configure your **PMSG / XIAO / ESP32-C** device in the **Meshtastic app** so that:
 
+- 🌈 **D1** works as a **4 pixel display** ( ws2812b )
 - 🔘 **D9** works as a **push button**
 - 🔊 **D10** drives a **vibration motor**
 - 📊 **I²C sensors** appear in the app (telemetry)
@@ -96,6 +98,7 @@ No firmware changes. No coding. Only app settings.
 
 | Function | Pin |
 |----------|-----|
+| Four pixel display | **D1** |
 | Push Button | **D9** |
 | Vibration Motor (PWM) | **D10** |
 
