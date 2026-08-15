@@ -112,6 +112,7 @@ https://www.youtube.com/watch?v=zhS_2MZbjzM
 ## PMSG Meshtastic Pin Mapping
 
 - Vibration motor: **D10**
+- 4 pixel ws2812b RGB les **D1**
 - User button (optional): **D9**
 
 ---
