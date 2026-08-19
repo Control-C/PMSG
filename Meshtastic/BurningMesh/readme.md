@@ -7,6 +7,45 @@ Works with both versions:
 - **ESP32** → Seeed XIAO ESP32S3 + Wio-SX1262 (868 / 915 MHz)
 - **nRF** → Seeed XIAO nRF52840 + Wio-SX1262
 
+Hack for playa Mesh burn 
+
+| Function | XIAO pin | GPIO |Where to set it in APP
+|------|---------------|-------------|
+| 4× WS2812C LED | D1 | **2** |External Notification → Output
+| Buzzer | D2 | **3** |Device → PWM Buzzer and External Notification → Output Buzzer
+
+
+## Pin Map
+
+| Function | XIAO pin | GPIO | Where to set it in the App |
+| --- | --- | --- | --- |
+| 4× WS2812C LED | D1 | 2 | External Notification → Output |
+| Buzzer | D2 | 3 | Device → PWM Buzzer<br>External Notification → Output Buzzer |
+| I²C SDA | D4 | 5 | Automatic (Grove) |
+| I²C SCL | D5 | 6 | Automatic (Grove) |
+
+## Sensors (I²C – Grove 3.3 V only)
+
+| Sensor | Address | What it does | Stock firmware support |
+| --- | --- | --- | --- |
+| VEML7700-TR | 0x10 | Ambient light (lux) | Yes – automatic |
+| LTR390 | 0x53 | UV + ambient light | Yes – automatic |
+| LIS2DH12 | 0x19 | Accelerometer / tap | Limited* |
+
+\* LIS2DH12 is not fully supported in stock Meshtastic for tap detection.  
+VEML7700 and LTR390 work automatically when Telemetry is enabled.
+
+## Custom firmware needed?
+
+| Feature | Stock firmware | Custom needed |
+| --- | --- | --- |
+| LED blink + Buzzer on message | Yes | No |
+| Button actions | Yes | No |
+| VEML7700 + LTR390 readings | Yes | No |
+| Full RGB colors / animations | No | Yes |
+| LIS2DH12 tap → send message | No | Yes |
+
+
 ---
 
 ## What you need
@@ -16,8 +55,8 @@ Works with both versions:
 | Board | XIAO ESP32S3 + Wio-SX1262 | XIAO nRF52840 + Wio-SX1262 |
 | Antenna | U.FL antenna (included) | U.FL antenna (included) |
 | LEDs | 4× WS2812C-2020-V1 on **D1** | Same |
-| Button | **D9** (or D2) | Same |
-| Vibration motor | **D10** (PWM) | Same |
+| Button | **D3 / NC** | Same |
+| Vibration motor | **D2** (PWM) | Same |
 | Sensors | Grove I²C @ 3.3 V only | Same |
 
 ---
@@ -60,11 +99,13 @@ Your glasses are now on the Burning Mesh.
 
 Go to **Settings → Modules → External Notification / GPIO**
 
+Playa version
+
 | Function              | Pin  | Setting                          |
 |-----------------------|------|----------------------------------|
 | 4-pixel WS2812C       | D1   | External Notification or later custom |
-| Button                | D9   | Input Pull-Up, Active LOW        |
-| Vibration motor       | D10  | PWM, Duty 150–200                |
+| Button                | nc   | Input Pull-Up, Active LOW        |
+| Vibration motor       | D2  | PWM, Duty 150–200                |
 | I²C sensors (Grove)   | SDA/SCL | Automatic telemetry           |
 
 **Button actions** (Settings → Device → Button Actions)  
