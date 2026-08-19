@@ -9,10 +9,10 @@ Works with both versions:
 
 Hack for playa Mesh burn 
 
-| Function | XIAO pin | GPIO |Where to set it in APP
-|------|---------------|-------------|
-| 4× WS2812C LED | D1 | **2** |External Notification → Output
-| Buzzer | D2 | **3** |Device → PWM Buzzer and External Notification → Output Buzzer
+| Function | XIAO pin | GPIO |Where to set it in APP |
+|------|---------------|-------------|--------------------------|
+| 4× WS2812C LED | D1 | **2** |External Notification → Output|
+| Buzzer | D2 | **3** |Device → PWM Buzzer and External Notification → Output Buzzer|
 
 
 ## Pin Map
