@@ -1,6 +1,6 @@
 # PMSG + Burning Mesh
 
-Simple setup for **Prototype Modular Smart Glasses** (PMSG) on the Burning Mesh (Meshtastic).
+Simple setup for **Playa Mesh Smart Glasses** (PMSG) on the Burning Mesh (Meshtastic).
 
 Works with both versions:
 
