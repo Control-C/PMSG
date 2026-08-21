@@ -1,3 +1,5 @@
+
+
 # PMSG (P.M. Smart Glasses)
 ![PMSG Cool Glasses](/img/cool.png)
 ## Flash custom firmware in minutes have fun using you PMSG in your way
@@ -54,7 +56,7 @@ Each option opens a pre-configured prompt tailored to your hardware and project.
 
 Recommended:
 - Open the PlatformIO folder ( plus Agent to help out ) 
-- Let Agent read `/ai/mcp/*.json` (if present)
+- Let Agent read `/AIS/mcp/*.json` (if present)
 - Ask Agent to respect XIAO board pinouts
 
 
@@ -182,6 +184,3 @@ The PMSG v1 includes:
 ## Future Updates: PMSG v4 and Beyond
 In 2026, we'll be rolling out exciting enhancements to the PMSG project. This includes pin reconfigurations for improved compatibility in next-generation versions (v4 and higher). We're also planning to release a comprehensive SDK along with affordable hardware kits based on the Seeed Studio XIAO platform—designed for easy integration without the need for a full pair of sunglasses.
 For more details on these upcoming features and to stay updated, visit our  [PMSG official website:](https://PMSG.online)
-
-
-
