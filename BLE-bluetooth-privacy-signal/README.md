@@ -1,6 +1,6 @@
 # BLE Privacy Signal
 
-Workshop convention so a person can say **do not record me** over Bluetooth, and a camera wearable can say **I have a camera / I am recording**.
+Concept convention so a person can say **do not record me** over Bluetooth, and a camera wearable can say **I have a camera / I am recording**.
 
 PMSG is the first proof of concept that **checks these symbols while recording**.
 
