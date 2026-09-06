@@ -143,6 +143,7 @@ pmsg:capture_state   idle | photo | video | audio | av
 | Physically stop a non-compliant camera | No |
 | Advertise BLE from a web page | No |
 | Do this in iOS Safari | No — native app or OS toggle |
+| Add Meta data that recording was done in a do not record  | Let Meta / snap / Tiktok ect block or don't allow to go public  |
 
 About 8–9/10 as a preference protocol. About 3/10 as a universal detector. Do not market the first as the second.
 
