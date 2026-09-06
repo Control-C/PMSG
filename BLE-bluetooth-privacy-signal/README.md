@@ -148,28 +148,4 @@ About 8–9/10 as a preference protocol. About 3/10 as a universal detector. Do 
 
 ---
 
-## Repo layout (after you add the rest)
 
-```
-README.md
-BLE-PRIVACY-SIGNAL.md
-index.html
-vendors/BLE-VENDOR-FACTORY-PROPOSAL.md
-```
-
-Host `index.html` at `https://pmsg.online/ble-privacy.html`.  
-Send factories the vendor file, not this README.
-
----
-
-## Start this repo
-
-```bash
-git init
-git add README.md
-git commit -m "Initial commit: BLE Privacy Signal"
-```
-
-Licence: implement the convention freely. Keep the four marks and the bit positions stable.
-
-PMSG / TeQMeQ — EU
