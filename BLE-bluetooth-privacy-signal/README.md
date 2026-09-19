@@ -1,4 +1,4 @@
-# BLE Privacy Signal  - Work name <BLEPS>
+# BLE Privacy Signal  - Work name BLEPS
 
 Concept convention so a person can say **do not record me** over Bluetooth, and a camera wearable can say **I have a camera / I am recording**.
 
