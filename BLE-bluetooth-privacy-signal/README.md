@@ -2,12 +2,14 @@
 
 Concept convention so a person can say **do not record me** over Bluetooth, and a camera wearable can say **I have a camera / I am recording**.
 
+This will work for or simple smart glasses but also for any recoding device like Phone - ai wearable and cars and robots
+
 PMSG is the first proof of concept that **checks these symbols while recording**.
 
 ```
 Bystander phone / badge     →  📵     please do not record me
 Glasses / AI wearable       →  📷     camera on board, idle
-                            →  📸     recording photo or video
+        & Robots / cars     →  📸     recording photo or video
                             →  🎤     microphone live
 ```
 
