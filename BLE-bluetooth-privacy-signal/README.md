@@ -138,6 +138,14 @@ pmsg:capture_state   idle | photo | video | audio | av
 If you have Iphone try this ShortCut 
 https://www.icloud.com/shortcuts/8db0e6148ccd415282c14c3290f9a85d
 
+Pixel / stock Android
+Settings → Connected devices → Connection preferences → Bluetooth → Device name
+
+Example: Paul 📵 or 📵 DNR → Rename
+Samsung
+Settings → Connections → Bluetooth → tap the name / ⋮ → Rename device
+If the menu is different, search Settings for device name.
+
 ## Honest limits
 
 | Can we | |
