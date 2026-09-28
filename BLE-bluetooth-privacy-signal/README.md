@@ -15,7 +15,7 @@ Glasses / AI wearable       →  📷     camera on board, idle
 
 This is a **preference protocol**, not a kill switch and not a hidden-camera detector.
 
-- Demo: https://pmsg.online/ble-privacy.html. *( soon WIP )
+
 - Glasses project: https://github.com/Control-C/PMSG
 - Site: https://pmsg.online
 - Article: https://www.linkedin.com/pulse/ble-privacy-signal-wearables-having-recording-audio-video-teqmeq
