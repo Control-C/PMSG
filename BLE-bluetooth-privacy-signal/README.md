@@ -135,6 +135,9 @@ pmsg:capture_state   idle | photo | video | audio | av
 
 ---
 
+If you have Iphone try this ShortCut 
+https://www.icloud.com/shortcuts/8db0e6148ccd415282c14c3290f9a85d
+
 ## Honest limits
 
 | Can we | |
