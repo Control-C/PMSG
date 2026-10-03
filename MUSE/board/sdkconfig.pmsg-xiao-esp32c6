@@ -1,0 +1,23 @@
+# PMSG V4 on XIAO ESP32C6 — overlay for the Muse ESP32 Device SDK.
+# Copy to esp32/devices/sdkconfig.pmsg-xiao-esp32c6 in
+# https://github.com/Control-C/Pmsg-muse-gadget-sdk
+#
+# Silk (PMSG PCB) vs chip GPIO on XIAO ESP32C6:
+#   4-pixel WS2812 data  D1  -> GPIO1
+#   Pairing button       D9  -> GPIO20  (active low)
+#   Vibration motor      D10 -> GPIO18  (PWM, not this file)
+#   I2C SDA / SCL        D4 / D5 -> GPIO22 / GPIO23
+#
+# Stock SDK status light is an on-board LED. Driving the 4-pixel bar
+# is firmware on top of this overlay. See ../README.md.
+
+CONFIG_IDF_TARGET="esp32c6"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_DIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# Pairing / reset button is PMSG D9, not the XIAO BOOT pad.
+CONFIG_HOMEHUB_BUTTON_GPIO=20
+
+# No PSRAM on XIAO ESP32C6. Tunnel needs more RAM than this module has.
+# CONFIG_HOMEHUB_HOME_NETWORK_TUNNEL is not set

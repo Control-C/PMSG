@@ -1,0 +1,66 @@
+{
+  "name": "PMSG",
+  "long_name": "Prototype Modular Smart Glasses",
+  "site": "https://pmsg.online",
+  "hardware_docs": "https://github.com/Control-C/PMSG/blob/main/Arduino%20IDE/README.md",
+  "sdk": "https://github.com/Control-C/Pmsg-muse-gadget-sdk",
+  "revision": "V4+",
+  "logic_voltage": 3.3,
+  "hosts": {
+    "xiao_esp32c6": {
+      "idf_target": "esp32c6",
+      "psram": false,
+      "home_network_tunnel": false,
+      "pins": {
+        "ws2812_d1": 1,
+        "button_d9": 20,
+        "vibration_d10": 18,
+        "i2c_sda_d4": 22,
+        "i2c_scl_d5": 23,
+        "battery_a0": 0,
+        "ir_d8": 19
+      }
+    },
+    "xiao_esp32s3": {
+      "idf_target": "esp32s3",
+      "psram": "module dependent",
+      "home_network_tunnel": "only with PSRAM",
+      "pins": {
+        "ws2812_d1": 2,
+        "button_d9": 8,
+        "vibration_d10": 9,
+        "i2c_sda_d4": 5,
+        "i2c_scl_d5": 6,
+        "battery_a0": 1,
+        "ir_d8": 7
+      }
+    }
+  },
+  "peripherals": {
+    "leds": {
+      "type": "WS2812C-2020-V1",
+      "count": 4,
+      "silk": "D1",
+      "order": "GRB",
+      "max_brightness": 16
+    },
+    "vibration": {
+      "silk": "D10",
+      "drive": "PWM",
+      "helper": "pmsg2vibrate.h"
+    },
+    "button": {
+      "silk": "D9",
+      "active": "low",
+      "pull": "up",
+      "roles": ["pair_confirm", "hold_5s_reset"]
+    }
+  },
+  "i2c": {
+    "lux_veml7700": "0x10",
+    "uv_ltr390": "0x53",
+    "movement_lis2dh12": "0x19",
+    "sht31": "0x44",
+    "sgp41_optional": "0x59"
+  }
+}
