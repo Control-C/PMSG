@@ -12,6 +12,8 @@ It is designed to work with:
 - Google Gemini
 - OpenCLAW 
 - NemoClaw
+- Muse (For PMSG )
+- MUSE by MEtA
 
   Soon
 - https://Loes.ai 
