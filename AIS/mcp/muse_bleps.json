@@ -1,0 +1,41 @@
+{
+  "project": "PMSG",
+  "long_name": "Prototype Modular Smart Glasses",
+  "site": "https://pmsg.online",
+  "updated": "2026-10-03",
+  "muse": {
+    "sdk": "https://github.com/Control-C/Pmsg-muse-gadget-sdk",
+    "upstream": "https://github.com/facebookincubator/muse-gadget-sdk",
+    "idf": "v6.0.1",
+    "token": "https://gadgets.muse.ai/settings/sdk-tokens",
+    "start": "Muse/README.md",
+    "host": "XIAO ESP32C6",
+    "overlay": "Muse/board/sdkconfig.pmsg-xiao-esp32c6",
+    "pins": "Muse/board/pmsg-hardware.json",
+    "tunnel_on_c6": false
+  },
+  "bleps": {
+    "name": "BLE Privacy Signal",
+    "folder": "BLE-bluetooth-privacy-signal",
+    "sketch": "BLE-bluetooth-privacy-signal/examples/bleps_pmsg.ino",
+    "kind": "preference protocol, not a kill switch",
+    "service": "0000f1a0-0000-1000-8000-00805f9b34fb",
+    "dnr_uuid": "0000f1a3-0000-1000-8000-00805f9b34fb",
+    "marks": {
+      "dnr": { "name": "📵 DNR", "byte": "0x20" },
+      "idle": { "name": "PMSG_📷", "byte": "0x11" },
+      "recording": { "name": "PMSG_📸", "byte": "0x13" },
+      "mic": { "name": "PMSG_🎤", "byte": "0x1C" },
+      "av": { "name": "PMSG_📸🎤", "byte": "0x1F" }
+    }
+  },
+  "v4_silk": {
+    "ws2812": "D1",
+    "button": "D9",
+    "vibration": "D10",
+    "i2c": ["D4", "D5"],
+    "lux": "VEML7700 0x10",
+    "uv": "LTR390 0x53",
+    "movement": "LIS2DH12 0x19"
+  }
+}
