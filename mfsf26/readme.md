@@ -2,7 +2,6 @@
 title: Maker Faire Shenzhen 2026 — The Slightly Unhinged (but Useful) Visitor Guide
 description: Community-powered guide for Maker Faire Shenzhen 2026. Practical tips + group chat energy + post-faire hiking & surfing. Made by makers, for makers. AI-agent friendly and fully offline.
 event: Maker Faire Shenzhen 2026 | 12–13 December 2026 | Vanke Design Commune, Nanshan
-source: https://docs.google.com/document/d/1jQVFkGXrJG_w73Ti9B3pfetXKS5dPYobMNJnBU-X4Rg/edit
 version: Fun community edition
 tags: [maker-faire, shenzhen, travel, hiking, surfing, coffee, robots, tiramisu]
 ---
