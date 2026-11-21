@@ -193,6 +193,6 @@ Ask anything. The group has seen worse.
 
 ---
 
-*Living document. Add tips, correct mistakes, contribute your own post-faire adventures. Original practical source: [Google Doc](https://docs.google.com/document/d/1jQVFkGXrJG_w73Ti9B3pfetXKS5dPYobMNJnBU-X4Rg/edit)*
+*Living document. Add tips, correct mistakes, contribute your own post-faire adventures. Original practical source: [Google Doc]() see app group*
 
 **Official event**: [shenzhenmakerfaire.com](https://www.shenzhenmakerfaire.com/)
